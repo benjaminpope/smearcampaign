@@ -1,0 +1,234 @@
+% mnras_template.tex
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+\usepackage{xspace}
+\usepackage{hyperref}
+
+
+
+% added by DH
+\newcommand{\numax}{\mbox{$\nu_{\rm max}$}\xspace}
+\newcommand{\Dnu}{\mbox{$\Delta \nu$}\xspace}
+\newcommand{\dnu}{\mbox{$\delta \nu$}\xspace}
+\newcommand{\muHz}{\mbox{$\mu$Hz}\xspace}
+\newcommand{\teff}{\mbox{$T_{\rm eff}$}\xspace}
+\newcommand{\logg}{\mbox{$\log g$}\xspace}
+\newcommand{\feh}{\mbox{$\rm{[Fe/H]}$}\xspace}
+\newcommand{\msun}{\mbox{$\mathrm{M}_{\sun}$}\xspace}
+\newcommand{\rsun}{\mbox{$\mathrm{R}_{\sun}$}\xspace}
+\newcommand{\kepler}{\emph{Kepler}\xspace}
+\newcommand{\hipparcos}{\emph{Hipparcos}\xspace}
+\newcommand{\gaia}{\emph{Gaia}\xspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[The Kepler Smear Campaign]{The \kepler Smear Campaign I: An Asteroseismic Catalogue of Bright Red Giants}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[B. J. S. Pope et al.]{Benjamin J. S. Pope,$^{1,2,3}$\thanks{E-mail: benjamin.pope@physics.ox.ac.uk}
+Guy R. Davies $^{4,5}$,
+Timothy R. White$^{5}$, et al
+\\
+% List of institutions
+$^{1}$Center for Cosmology and Particle Physics, Department of Physics, New York University, 726 Broadway, New York, NY 10003, USA\\
+$^{2}$NASA Sagan Fellow\\
+$^{3}$Oxford Astrophysics, Denys Wilkinson Building, University of Oxford, OX1 3RH, Oxford, UK\\
+$^{4}$School of Physics and Astronomy, University of Birmingham, Birmingham B15 2TT, UK\\
+$^{5}$Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, Ny Munkegade 120, DK-8000 Aarhus C, Denmark\\
+}
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2017}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+Here we present the first data release of the \kepler Smear Campaign, using collateral `smear' data obtained by \kepler to reconstruct light curves of 101~stars too bright to have been otherwise observed. We describe the pipeline developed to extract and calibrate these light curves, and show that we attain photometric precision comparable to stars ordinarily more observed in the nominal \kepler mission. In this Paper, we focus in particular on a subset of these consisting of 60~red giants for which we detect solar-like oscillations. Using high-resolution spectroscopy from the Tillinghast Reflector Echelle Spectrograph (TRES) together with asteroseismic modelling, we constrain the masses and evolutionary states of these benchmark red giants. All source code, light curves, TRES spectra, and asteroseismic and stellar parameters are publicly available as a \kepler legacy sample.
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+asteroseismology -- techniques: photometric -- stars: variable: general
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\label{intro}
+
+The \kepler Space Telescope, operated by NASA, was launched in 2009 to obtain photometry of hundreds of thousands of stars in a field in Cygnus-Lyra, in order to detect a statistically-useful sample of transiting exoplanets \citep{2010Sci...327..977B}. It achieved this primary goal, showing that exoplanets are common around Sun-like stars \citep{2013ApJ...766...81F,2013PNAS..11019273P,2014ApJ...795...64F}, though with the failure of two reaction wheels, the mission was cut short and there remain substantial uncertainties on these estimates. \kepler was revived as a two-wheeled mission, K2, with its third axis balanced against solar radiation pressure. K2 is therefore constrained to point in the ecliptic plane, which it surveys in a succession of $\sim 80$~day Campaigns. In this paper, we will deal exclusively with data from the nominal \kepler mission before this change.
+
+Beyond searching for planets, \kepler has revolutionized the field of asteroseismology \citep{2010PASP..122..131G}. It has yielded the first detection of gravity-mode period spacings in a red giant \citep{rggmodes}, enabling probes of interior rotation of red giants \citep{rggmoderotation} and distinguishing between hydrogen- and helium-burning cores \citep{rggmodehelium}. It has also permitted the determination of ages and fundamental parameters of main-sequence stars \citep{silvaages}, including planet-hosting stars \citep{huberplanetages,silvaplanetages}, revealing the most ancient known planetary system, dating back to the earliest stages of the galaxy \citep{ancientplanets}. By comparing asteroseismic stellar ages to stellar rotation periods, \citet{angusgyro} have shown that gyrochronology models cannot fit the data with a single relation, leading \citet{vansadersgyro} to suggest a qualitative change in dynamo mechanism as stars age through the main sequence. 
+
+A major outcome of the \kepler asteroseismology programme is a legacy sample of extremely well characterized stars which can serve as benchmarks for future work \citep{keplerlegacy1,keplerlegacy2}. As well as asteroseismology, by also using optical interferometry, it has been possible to determine fundamental parameters of main-sequence and giant stars with unprecedented precision \citet{huber12,thetacygwhite,white15}. Likewise by combining with spectroscopy, \citet{hawkinsapogee} have been able to produce a large sample of stars with precise elemental abundances by fitting spectroscopic data with \logg and \teff fixed to asteroseismically-determined values. It is necessary to calibrate such a study against benchmark stars with very precisely-determined parameters, which in practice means requires nearby bright stars that are amenable to very high signal-to-noise spectroscopy plus asteroseismology \citep{creeveybenchmark},  parallaxes \citep{hawkinsbenchmarks}, and/or interferometry \citep{casagrandebenchmark,creeveybenchmark2}. 
+
+Brighter \kepler stars are therefore ideal benchmark targets, as photometry can be most easily complemented by \hipparcos parallaxes, interferometric diameters, and high resolution spectroscopy.  
+Unfortunately, the \kepler field was deliberately placed to minimize overall the number of saturated stars, so that only a dozen stars brighter than~6th~magnitude landed on silicon \citep{2010ApJ...713L..79K}. This was because stars brighter than $Kp \sim 11$ saturate the CCD detector, spilling electrons up and down their column on the CCD and rendering these pixels otherwise unusable. Furthermore, due to the limited availablility of bandwidth to download data from the satellite, only a fraction \textcolor{red}{What fraction?} of pixels on the \kepler detector are actually downloaded, these being allocated via a competitive proposal process. The result of these two target selection constraints is that photometry was obtained for only \textcolor{red}{a small number} of saturated stars in the \kepler field, while many bright targets were ignored. 
+
+\citet{orig_smear} noted that there is a way to obtain photometry of every target on-silicon in \kepler using a data channel normally used for calibration, even if active pixels were not allocated and downloaded. \kepler employs an inter-line transfer CCD as its detector, which successively shuffles each row of pixels down to the edges of the chip where they are ultimately read out. Because the \kepler camera lacks a shutter, the detector is exposed to light during the readout process, with the result that fluxes in each pixel are biased up by light collected from objects in the same column. This is a particularly serious issue for faint objects in the same detector column as brighter stars, and it is important to calibrate this at each readout stage. Six rows of blank `masked' pixels are allocated in each column to measure the smear bias; furthermore, six `virtual' rows are recorded at the end of the readout, with the result that twelve rows of pixels sample the smear bias in each column. \citet{orig_smear} realized that these encode the light curves of bright targets in a 1D projection of the star field. The masked and virtual smear registers each receive $\sim 1/1034$ of the incident flux in each column; if this is dominated by the light from a single star, the flux combining both smear registers is equivalent to that of a star $\sim 6.8$~times fainter. 
+
+In \citet{smear}, we demonstrated a method for extracting precise light curves of bright stars in \kepler and K2, and presented light curves of a small number of variable stars as examples to illustrate this method. In this Paper we present light curves of all unobserved or significantly under-observed stars brighter than $V=8$ in the \kepler field. This sample is biased towards red giants and hot stars, containing only a few FG dwarfs. We find no transiting planets, but detect $M$~new eclipsing binaries, and solar-like oscillations in $N$~red giants. We do not model hot stars or FG dwarfs in great detail, but provide some discussion and initial classification of interesting variability. For eclipsing binaries, we present the results of light-curve modelling to precisely determine their parameters. Finally, for the oscillating red giants, which constitute the bulk of the sample, we determine the asteroseismic parameters \numax and \Dnu, and therefore stellar masses and \logg measurements; and we and obtain high-resolution spectroscopy with the Tillinghast Reflector Echelle Spectrograph (TRES), from whose spectra we derive stellar parameters and elemental abundances constrained by asteroseismic parameters. We discuss the potential for these as benchmark stars for other stellar surveys, in particular \gaia. 
+
+%We have made all new data products and software discussed in this paper publicly available, and encourage interested readers to use these in their own research.   
+
+\section{Method}
+\label{method}
+
+\subsection{Photometry}
+\label{photometry}
+
+We selected as our sample all stars on-silicon in \kepler with $Kp<8$ which were unobserved for more than $10$ quarters \textcolor{red}{Tim: what was your cutoff in quarters for `underobserved' stars?}, including those stars which were entirely unobserved. A number of these lay just at the edge of a detector, with the result that in some cadences the centroid of the star did not lie on the chip; light curves from these targets were found to be of extremely low quality and all of these objects were discarded. After applying these criteria we obtained a list of \textcolor{red}{101} targets. Aside from the restriction on stars falling on the edge of a chip, the addition of these objects to conventionally-observed stars makes the \kepler survey magnitude-complete down to $Kp=8$. 
+
+In preparing light curves of the \kepler smear stars, we follow the methods described in \citet{smear}, with some improvements. We select using RA and Dec values from the \kepler Input Catalog (KIC) \citep{kic}, and query MAST to find the corresponding mean pixel position for a given \kepler quarter. We measure the centroid of smear columns in the vicinity, and use these values to do raw aperture photometry. We find that the cosine-bell aperture used for raw photometry in \citet{smear} can in some light curves introduce position-dependent systematics and jumps. We instead in this work apply a super-Gaussian aperture, $A \propto \exp{\dfrac{-(x-x_0)}{w} ^ 4}$, where $x_0$ is the centroid and $w$ a width in pixels. The very flat top of this function helps avoid significant variation with position, while still smoothly rolling off at the edges to avoid discontinuous artefacts. We calculate this on a grid of $10\times$ subsampled points in time so that the sharply varying edge changes column weights smoothly as a function of centroid. We extract photometry using apertures with a range of widths $w \in\{1.5,~2,~3,~4,~5\}$ pixels.
+
+From this raw photometry we subtract a background light curve, which corrects for time-varying global systematics. Whereas in \citet{smear} we then subtract a background estimate chosen manually, for this larger set of light curves, we now choose the lowest $25\%$ of pixels by median flux as being unlikely to be contaminated by stars, and take our background level to be the median of this at each time sample. To denoise this, we fit a Gaussian Process with a 30-day timescale squared exponential kernel using \textsc{george} \citep{hodlr}, and our final background light curve is taken to be the posterior mean of this GP. 
+
+The dominant source of residual systematic errors in nominal \kepler time series is a common-mode variation primarily due to thermal changes on board the spacecraft, an issue which is traditionally dealt with by identifying and fitting a linear combination of systematic modes \citep{pdc0,pdc1,pdc2,petigura}. We adopt the same approach here, using the \kepler Pre-search Data Conditioning (PDC) Cotrending Basis Vectors (CBVs) available from MAST, finding least-squares fits of  either the first~4 or~8 CBVs to each light curve. We note that this can subtract astrophysical signals on long timescales, such that we use and recommend 4~CBV light curves for stars with variability on timescales longer than $\sim 5$ days, but otherwise use the 8~CBV light curves. There is some room for improvement here by simultaneously modelling astrophysical and instrumental variations, but this is beyond the scope of this paper. In the following, we will use the light curves with the lowest 6.5~hr Combined Differential Photometric Precision (CDPP) \citep{cdpp} out of all apertures, as calculated with the \textsc{k2sc} implementation \citep{k2sc}. \textcolor{red}{This is primitive - how do we justify this? We only did it because we didn't have anything cleverer, but now we do. Should I redo this?}. 
+\subsection{Asteroseismology}
+\label{asteroseismology}
+
+For all \textcolor{red}{N} red giants identified in this sample, we have attempted to extract the asteroseismic parameters \numax and $\langle \Dnu \rangle$. These constrain fundamental stellar parameters independently from spectroscopic or interferometric measurements: 
+
+\begin{equation}
+\numax \propto \dfrac{g}{g_{\sun}} \cdot \dfrac{\teff}{\teff_{\sun}}^{\dfrac{1}{2}}
+\end{equation}
+
+and
+
+\begin{equation}
+\langle \Dnu \rangle \propto \sqrt{\langle \rho \rangle} = \sqrt{\dfrac{M}{\msun} (\dfrac{R}{\rsun})^{-3}}
+\end{equation}
+
+We follow the method of \citet{2016AN....337..774D}, obtaining a Lomb-Scargle periodogram of the smoothed time series according to the method of \citet{2011MNRAS.414L...6G}. We then conduct a Markov Chain Monte Carlo fit to this, applying the combined granulation and oscillation model of \citet{2014A&A...570A..41K}, consisting of two Harvey profiles for the granulation \citep{1985ESASP.235..199H}, a Gaussian envelope for the stellar oscillations, and a white noise background for instrumental noise. We find that the marginal posterior distribution for the Gaussian envelope is well-approximated by a single Gaussian, and take its median and standard deviation to be our estimates for \numax and its uncertainty.
+
+To estimate \Dnu, we divide the power spectrum through by the granulation and noise models to obtain a signal-to-noise spectrum, and fit a sum of Lorentzians separated by mean large (\Dnu) and small (\dnu) separations to the part of this spectrum in the vicinity of \numax. In practice, for this dataset, \dnu is poorly constrained, but mean $\langle \Dnu \rangle$ is typically well-constrained and its posterior marginal distribution is well-represented by a single Gaussian as with \numax. 
+
+We obtain good estimates of these asteroseismic parameters for \textcolor{red}{35} targets. In the remainder of cases, we find that the very-low-frequency ($\lesssim 2\muHz$) oscillations are affected by filter artefacts from detrending, and we are not able to obtain good estimates for these stars. \textcolor{red}{Should we try with these?}
+
+\subsection{Spectroscopy}
+\label{spectroscopy}
+
+For the whole red giant sample, we have obtained high-resolution spectroscopy with the Tillinghast Reflector Echelle Spectrograph (TRES) in order to constrain stellar parameters and elemental abundances. Operating with spectral resolving power $R=44 000$, we obtain signal-to-noise ratios of \textcolor{red}{something} per resolution element. 
+
+\section{Results}
+\label{targets}
+
+\subsection{Red Giants}
+\label{rgs}
+
+\subsection{Other Stars}
+\label{other}
+
+\section{Open Science}
+\label{open}
+
+We believe in open science, and have therefore made all substantive products of this research available to the interested reader. All code used to produce smear light curves is available under a GPL~v3 license at \url{https://github.com/benjaminpope/keplersmear}. All smear light curves, both including the red giant sample studied in detail in Section~\ref{rgs}, and other stars as discussed in Section~\ref{other}, can be downloaded from the Mikulski Archive for Space Telescopes (MAST) as a High-Level Science Product. TRES spectra are available from \textcolor{red}{somewhere}, and all asteroseismic parameters and derived stellar parameters for the red giants in Section~\ref{rgs} are provided in an online-only table as Supplementary Material to this paper.
+
+\section{Conclusions}
+\label{conclusions}
+
+
+
+\section*{Acknowledgements}
+
+This research made use of NASA's Astrophysics Data System; the SIMBAD database, operated at CDS, Strasbourg, France; the IPython package \citep{PER-GRA:2007}; SciPy \citep{jones_scipy_2001}; and Astropy, a community-developed core Python package for Astronomy \citep{2013A&A...558A..33A}. Some of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST). STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555. Support for MAST for non-HST data is provided by the NASA Office of Space Science via grant NNX13AC07G and by other grants and contracts. We acknowledge the support of the Group of Eight universities and the German Academic Exchange Service through the Go8 Australia-Germany Joint Research Co-operation Scheme. 
+
+B.P. acknowledges support from Balliol College and the Clarendon Fund. D.H. acknowledges support by the Australian Research Council's Discovery Projects funding scheme (project number DE140101364) and support by the NASA Grant NNX14AB92G issued through the \emph{Kepler} Participating Scientist Program.
+
+BP acknowledges being on the traditional territory of the Lenape Nations and, today, recognize that Manhattan continues to be the home to many Algonkian peoples. We thank the Lenape peoples for allowing us to carry out this work on the Lenape original homelands at New York University. BP and TW would like to acknowledge the Gadigal people of the Eora Nation and the Norongerragal and Gweagal peoples of the Tharawal Nation as the traditional owners of the land at the University of Sydney and the Sutherland Shire on which some of this work was carried out, and pay their respects to their knowledge, and their elders past, present and future.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+% The best way to enter references is to use BibTeX:
+
+\bibliographystyle{mnras}
+\bibliography{ms} % if your bibtex file is called example.bib
+
+
+% Alternatively you could enter them by hand, like this:
+% This method is tedious and prone to error if you have lots of references
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
+
+% End of mnras_template.tex
