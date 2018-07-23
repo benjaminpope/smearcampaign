@@ -15,3 +15,5 @@
 `spectra_tres_pope.tar.gz` contains the raw data of all the spectra. 
 
 `abundances.zip` is Keith Hawkins' set of plots displaying abundances in the smear sample vs reference samples.
+
+`final_abundances_merged.fits` is Keith's set of abundances for all stars in fits format.
