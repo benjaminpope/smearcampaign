@@ -1,0 +1,1 @@
+`asteroseismic_logg.ipynb` is the notebook used to turn numaxes into log g measurements.
