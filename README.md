@@ -33,4 +33,4 @@ Please cite our forthcoming paper, or Pope et al. (in prep), together with the o
 
 ## Code
 
-The `keplersmear` source code used to produce these light curves is available at https://github.com/benjaminpope/keplersmear under a GPLv3 license. We regret that this has some difficult dependencies which may make it impractical at present for your to install. 
+The `keplersmear` source code used to produce these light curves is available at https://github.com/benjaminpope/keplersmear under a GPLv3 license. We regret that this has some difficult dependencies which may make it impractical at present for you to install. 
