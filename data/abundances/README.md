@@ -1,6 +1,6 @@
-#K. Hawkins Jan 1 2017 Columbia University / CCA
+# K. Hawkins Jan 1 2017 Columbia University / CCA
 
-###README for chemical abundances for B. Pope TRES spectra of smear targets
+### README for chemical abundances for B. Pope TRES spectra of smear targets
 
 Total Unique targets with seismic log g info (and spectra): 35
 
