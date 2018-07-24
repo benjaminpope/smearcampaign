@@ -12,7 +12,7 @@ All lightcurves will be made available as High-Level Science Products (HLSPs) on
 
 If you wish to use light curves not available through MAST please offer coauthorship to members of the __Kepler Smear Campaign__. 
 
-Please cite our forthcoming paper, or Pope et al. (in prep), together with the original smear paper, using the following BibTeX:
+Please cite our forthcoming paper as Pope et al. (in prep), together with the original smear paper, using the following BibTeX:
 
 	@ARTICLE{2016MNRAS.455L..36P,
 	   author = {{Pope}, B.~J.~S. and {White}, T.~R. and {Huber}, D. and {Murphy}, S.~J. and 
