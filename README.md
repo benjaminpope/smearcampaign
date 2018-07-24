@@ -1,5 +1,5 @@
 # smearcampaign
-[![arXiv](http://img.shields.io/badge/arXiv-1603.09167-blue.svg?style=flat)](http://arxiv.org/abs/1510.00008)
+[![arXiv](http://img.shields.io/badge/arXiv-1510.00008-blue.svg?style=flat)](http://arxiv.org/abs/1510.00008)
 
 
 A repository containing the paper, data and notebooks for the __Kepler Smear Campaign__, a study of the brightest stars in the _Kepler_ field not observed conventionally by _Kepler_, but which we have retrieved with smear photometry (https://arxiv.org/abs/1510.00008). 
