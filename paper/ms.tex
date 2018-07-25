@@ -164,7 +164,7 @@ The dominant source of residual systematic errors in nominal \kepler time series
 \subsection{Asteroseismology}
 \label{asteroseismology}
 
-\textcolor{red}{Guy - can you describe your pipeline here?}
+\textcolor{red}{Guy - can you describe your pipeline in more detail here?}
 
 For all \textcolor{red}{N} red giants identified in this sample, we have attempted to extract the asteroseismic parameters \numax and $\langle \Dnu \rangle$ \citep{KB95,2013ARA&A..51..353C}. These constrain fundamental stellar parameters independently from spectroscopic or interferometric measurements: 
 
@@ -190,9 +190,11 @@ Once \numax has been estimated, we use the asteroseismic scaling relation for \n
 \subsection{Spectroscopy}
 \label{spectroscopy}
 
-For the whole red giant sample, we have obtained high-resolution spectroscopy with TRES in order to constrain stellar parameters and elemental abundances. Operating with spectral resolving power $R=44 000$, we obtain signal-to-noise ratios of \textcolor{red}{something} per resolution element. 
+For the whole red giant sample, we have obtained high-resolution spectroscopy with TRES in order to constrain stellar parameters and elemental abundances. Operating with spectral resolving power $R=44 000$, we obtain signal-to-noise ratios of \textcolor{red}{something} per resolution element. From this observing run we have 35 unique targets with seismic \logg and spectra. 
 
-\textcolor{red}{Keith - can you describe how you got the abundances here?}
+\textcolor{red}{Keith - can you describe in more detail how you got the abundances here?}
+
+We initially run the Stellar Parameter Classification \citep[SPC:][]{spc} code to determine \teff and \logg, using the SPC \teff to inform the asteroseismic estimation of \logg from \numax. For deriving abundances, \teff is fixed from the results of an initial SPC fit, while \logg is fixed to the seismic values. The spectroscopic parameters $v_{\text{mic}}$, and broadening (convolution by $V_{\text{mac}}$, $v_{\sin{i}}$ and the instrumental line profile) as well as [Fe/H] and all chemical abundances are derived using the Brussels Automatic Code for Characterizing High accUracy Spectra \citep[BACCHUS:][]{bacchus}.
 
 \section{Results}
 \label{targets}
