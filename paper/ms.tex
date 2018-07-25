@@ -190,9 +190,7 @@ Once \numax has been estimated, we use the asteroseismic scaling relation for \n
 \subsection{Spectroscopy}
 \label{spectroscopy}
 
-For the whole red giant sample, we have obtained high-resolution spectroscopy with TRES in order to constrain stellar parameters and elemental abundances. Operating with spectral resolving power $R=44 000$, we obtain signal-to-noise ratios of \textcolor{red}{something} per resolution element. From this observing run we have 35 unique targets with seismic \logg and spectra. 
-
-\textcolor{red}{Keith - can you describe in more detail how you got the abundances here?}
+For the whole red giant sample, we have obtained high-resolution spectroscopy with TRES in order to constrain stellar parameters and elemental abundances. Operating with spectral resolving power $R=44 000$, we obtain signal-to-noise ratios of tens to hundreds per resolution element. We note that this resolution and SNR are sufficient for an exploratory study, but for more detailed analysis it will be desirable to use APOGEE or similar instruments at higher resolution and SNR. From this observing run we have 35 unique targets with seismic \logg and spectra, one more star than the \gaia-ESO benchmark set and a significant addition to the ensemble of bright red giants with asteroseismic parameter determinations. 
 
 We initially run the Stellar Parameter Classification \citep[SPC:][]{spc} code to determine \teff and \logg, using the SPC \teff to inform the asteroseismic estimation of \logg from \numax. For deriving abundances, \teff is fixed from the results of an initial SPC fit, while \logg is fixed to the seismic values. The spectroscopic parameters $v_{\text{mic}}$, and broadening (convolution by $V_{\text{mac}}$, $v_{\sin{i}}$ and the instrumental line profile) as well as [Fe/H] and all chemical abundances are derived using the Brussels Automatic Code for Characterizing High accUracy Spectra \citep[BACCHUS:][]{bacchus}, and the results from this calculation are displayed in Table~\ref{stellar_props}. Individual elemental abundances are extracted both with and without a line-by-line differential approach with respect to Arcturus ($\alpha$~Bo\"{o}tis) using the method described by \citet{gaiabenchmark4} and the Arcturus abundances from \citep{hawkinsapogee}. The results of these calculations are presented in Tables~\ref{elems1},~\ref{elems2} and~\ref{elems3}. We note that no abundances for oxygen could be reliably derived for any of the stars in our spectroscopic sample.
 
@@ -207,7 +205,6 @@ We initially run the Stellar Parameter Classification \citep[SPC:][]{spc} code t
 
 \subsection{Red Giants}
 \label{rgs}
-
 
 \subsection{Other Stars}
 \label{other}
