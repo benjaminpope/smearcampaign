@@ -184,6 +184,17 @@ The dominant source of residual systematic errors in nominal \kepler time series
 \gaia colour-magnitude diagram of the Smear Campaign stars (orange and teal) situated in sample of \kepler stars with \gaia parallax $\text{SNR} > 25$ (black), using the Bedell \url{gaia-kepler.fun} crossmatch and \gaia~DR2 calibrated distances from \citet{gaiadists}. The smear sample includes giants and hot main-sequence stars. Those giants for which TRES spectroscopy have been obtained are highlighted in teal. An interactive version of this diagram is available as supplementary material from the journal or at \url{benjaminpope.github.io/data/cmd_smear.html}.}
 \end{figure*}
 
+Because the smear data are collected along an entire CCD~column, there is the risk of contamination from sufficiently bright sources. This is especially true in doing asteroseismology of red giants, where the low-amplitude stochastically-excited oscillations can be washed out in a power spectrum by the coherent high amplitude variations of a classical pulsator, even if the background star is much fainter. We can assess the importance of this contamination by considering the differences between odd and even quarters: because the \kepler satellite rotates $90^{\circ}$ between successive quarters, any contaminant will lie in the same column as a smear target only every second quarter, falling in the other quarters in the same row but not necessarily the same column. We have therefore generated Lomb-Scargle periodograms \citep{lomb,scargle} of each light curve, clipped for outliers, and considering only odd and even quarters, and visually inspected these for significant differences. In the great majority of cases they closely resemble one another, indicating that contamination is at worst a minor effect. In the case of HD~181878, a red giant, there is clear and significant contamination from a $\delta$~Scuti variable, as is seen in Figure~\ref{contamination}. 
+
+
+\begin{figure}
+\noindent\includegraphics[width=8cm,keepaspectratio]{contam_HD_181778.png}
+
+\caption{\label{contamination}
+Power spectra of odd and even quarters of HD~181778. It is clear from inspection that while odd quarters have the power spectrum expected of a giant star, even quarters have very high amplitude coherent oscillations typical of a $\delta$~Scuti variable.}
+\end{figure}
+
+
 \input{all_stars.tex}
 \input{all_Stars2.tex}
 
@@ -239,6 +250,8 @@ Individual elemental abundances are derived by first fixing the stellar atmosphe
 \subsubsection{Chemical Composition}
 \label{chemical}
 place [X/Fe] vs [Fe/H] diagrams here and discuss which Galactic populations these stars come from. May also want to discuss how these span the typical Galactic populations and can act as benchmark stars for APOGEE or other large surveys 
+
+Two of the stars in our sample also appear in the Hypatia catalogue of stellar abundances \citep{hypatia}: HD~185351 and HD~175740. The abundances reported here for HD~185351 are consistent within the large errorbars of both surveys with those reported in Hypatia, while for HD~175740 they are not. \textcolor{red}{Keith - what's going on here? Check this?}
 
 \subsubsection{Red Clump Stars}
 \label{clumpstars}
