@@ -211,13 +211,13 @@ While~64 red giants have been identified in this sample, for some of these, by v
 
 \begin{equation}
 \label{scaling}
-\numax \propto \dfrac{g}{g_{\sun}} \cdot \dfrac{\teff}{\teff_{\sun}}^{\dfrac{1}{2}}
+\numax \propto \dfrac{g}{g_{\sun}} \cdot \left(\dfrac{\teff}{\teff_{\sun}}\right)^{\dfrac{1}{2}}
 \end{equation}
 
 and
 
 \begin{equation}
-\langle \Dnu \rangle \propto \sqrt{\langle \rho \rangle} = \sqrt{\dfrac{M}{\msun} (\dfrac{R}{\rsun})^{-3}}
+\langle \Dnu \rangle \propto \sqrt{\langle \rho \rangle} = \sqrt{\dfrac{M}{\msun} \left(\dfrac{R}{\rsun}\right)^{-3}}
 \end{equation}
 
 We follow the method of \citet{2016AN....337..774D}, obtaining a Lomb-Scargle periodogram of the smoothed time series according to the method of \citet{2011MNRAS.414L...6G}. We then conduct a Markov Chain Monte Carlo fit to this, applying the combined granulation and oscillation model of \citet{2014A&A...570A..41K}, consisting of two Harvey profiles for the granulation \citep{1985ESASP.235..199H}, a Gaussian envelope for the stellar oscillations, and a white noise background for instrumental noise. We find that the marginal posterior distribution for the Gaussian envelope is well-approximated by a single Gaussian, and take its median and standard deviation to be our estimates for \numax and its uncertainty.
