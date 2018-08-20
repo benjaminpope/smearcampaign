@@ -99,3 +99,4 @@ HD_186255_smear_combined.csv filter=lfs diff=lfs merge=lfs -text
 HD_187277_smear_combined.csv filter=lfs diff=lfs merge=lfs -text
 HD_189636B_smear_combined.csv filter=lfs diff=lfs merge=lfs -text
 HD_178797_smear_combined.csv filter=lfs diff=lfs merge=lfs -text
+V554_Lyr_smear_combined.csv filter=lfs diff=lfs merge=lfs -text
