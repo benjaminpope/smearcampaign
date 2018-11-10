@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ms.aux
+The style file: mnras.bst
+Database file #1: ms.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in aertsbook
+You've used 115 entries,
+            2881 wiz_defined-function locations,
+            1633 strings with 58027 characters,
+and the built_in function-call counts, 51899 in all, are:
+= -- 4242
+> -- 3656
+< -- 194
++ -- 1685
+- -- 470
+* -- 6867
+:= -- 7955
+add.period$ -- 0
+call.type$ -- 115
+change.case$ -- 230
+chr.to.int$ -- 111
+cite$ -- 116
+duplicate$ -- 2588
+empty$ -- 2633
+format.name$ -- 868
+if$ -- 8827
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 112
+newline$ -- 359
+num.names$ -- 708
+pop$ -- 608
+preamble$ -- 1
+purify$ -- 460
+quote$ -- 0
+skip$ -- 1461
+stack$ -- 0
+substring$ -- 2878
+swap$ -- 1282
+text.length$ -- 468
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1032
+warning$ -- 1
+while$ -- 790
+width$ -- 0
+write$ -- 1177
+(There was 1 warning)
