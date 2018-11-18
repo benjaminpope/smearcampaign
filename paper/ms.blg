@@ -6,45 +6,45 @@ Database file #1: ms.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty publisher in aertsbook
-You've used 115 entries,
+You've used 126 entries,
             2881 wiz_defined-function locations,
-            1633 strings with 58027 characters,
-and the built_in function-call counts, 51899 in all, are:
-= -- 4242
-> -- 3656
-< -- 194
-+ -- 1685
-- -- 470
-* -- 6867
-:= -- 7955
+            1711 strings with 62758 characters,
+and the built_in function-call counts, 56558 in all, are:
+= -- 4640
+> -- 3964
+< -- 200
++ -- 1832
+- -- 504
+* -- 7526
+:= -- 8646
 add.period$ -- 0
-call.type$ -- 115
-change.case$ -- 230
-chr.to.int$ -- 111
-cite$ -- 116
-duplicate$ -- 2588
-empty$ -- 2633
-format.name$ -- 868
-if$ -- 8827
-int.to.chr$ -- 5
+call.type$ -- 126
+change.case$ -- 252
+chr.to.int$ -- 121
+cite$ -- 127
+duplicate$ -- 2825
+empty$ -- 2875
+format.name$ -- 940
+if$ -- 9613
+int.to.chr$ -- 6
 int.to.str$ -- 0
-missing$ -- 112
-newline$ -- 359
-num.names$ -- 708
-pop$ -- 608
+missing$ -- 123
+newline$ -- 392
+num.names$ -- 764
+pop$ -- 663
 preamble$ -- 1
-purify$ -- 460
+purify$ -- 504
 quote$ -- 0
-skip$ -- 1461
+skip$ -- 1587
 stack$ -- 0
-substring$ -- 2878
-swap$ -- 1282
-text.length$ -- 468
+substring$ -- 3156
+swap$ -- 1378
+text.length$ -- 512
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1032
+type$ -- 1131
 warning$ -- 1
-while$ -- 790
+while$ -- 862
 width$ -- 0
-write$ -- 1177
+write$ -- 1287
 (There was 1 warning)

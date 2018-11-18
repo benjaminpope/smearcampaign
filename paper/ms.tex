@@ -281,7 +281,14 @@ To achieve the most precise abundances we have derived them using both with and 
 \subsection{Red Giants}
 \label{rgs}
 
-\textcolor{red}{Paragraph on stellar modelling by Amalie}
+We determined physical properties such as mass, radius, and age for the 33 red giants from their atmospheric and asteroseismic observables (see Table ) using the BAyesian STellar Algorithm \citep[\textsc{basta}][]{silvaaguirre2015,silvaaguirre2017}. \textsc{basta} compares the observed properties with predictions from theoretical models of stellar evolution, in this case the recently updated BaSTI (a Bag of Stellar Tracks and Isochrones) stellar models and isochrones library \citep{Hidalgo:2018dy} with overshooting and no mass-loss.
+
+The spectroscopic properties we fit are the effective temperature \teff, the metallicity \feh, and the surface gravities \logg from Table~\ref{stellar_props}. These are accompanied by the global asteroseismic properties \Dnu and \numax from Table~\ref{astero_table}. Theoretical predictions of \Dnu and \numax are computed using the asteroseismic scaling relation for any point along an evolutionary track or isochrone. For the solar values, we adopt $\nu_{\text{max, }\odot}=3090$~$\mu$Hz, $\Delta\nu_{\odot}=135.1$~$\mu$Hz \citep{huber2011}, and $T_{\text{eff, }\odot}=5777$~K.
+
+The accuracy of the asteroseismic scaling relations across different metallicities, effective temperatures, and evolutionary status is currently an active discussion within the field of asteroseismology \citep[see][]{white2011,belkacem2011,sharma2016,viani2017}.
+We apply the correction by \cite{Serenelli:2017cn} to the large frequency separation relation in Equation~\ref{Dnuscaling} as it has been shown to reproduce the results of a number of classical age determination for the open clusters M67 \citep{stello2016} and NGC~6819 \citep{casagrande2016}.
+
+We compare the solutions found using this set of fitting parameter with those found using only spectroscopic input in Figure~\ref{masses}, and we find that the change in median stellar parameters between the two results is small for all analyzed red giants. However, in the comparison plot it becomes visible how adding the asteroseismic constraints to the fit narrows down the parameter space and thus decrease the derived uncertainties.
 
 
 \begin{figure*}
