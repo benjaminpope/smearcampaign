@@ -90,7 +90,7 @@ Conny Aerts,$^{9,10,11}$\newauthor
 Suzanne Aigrain,$^{3}$ 
 Victoria Antoci,$^{5}$
 Timothy R. Bedding,$^{12,5}$
-Dominic M. Bowman,$^{10}$\newauthor
+Dominic M. Bowman,$^{9}$\newauthor
 Ashley Chontos,$^{13}$
 Gilbert A. Esquerdo,$^{8}$
 Daniel Huber,$^{13}$
@@ -185,9 +185,14 @@ Considering stars lying close to the main-sequence, from the \kepler power spect
 \subsection{Photometry}
 \label{photometry}
 
-In generating light curves of the \kepler smear stars, we have followed the methods described by \citet{smear}, with some improvements. We selected our input RA and Dec values from the \kepler Input Catalog (KIC) \citep{kic}, and queried MAST to find the corresponding mean pixel position for each \kepler quarter. We then measured the centroid of smear columns in the vicinity, and used these values to do raw aperture photometry. We found that the cosine-bell aperture used for raw photometry by \citet{smear} can sometimes introduce position-dependent systematics and jumps. We instead used a super-Gaussian aperture, $A \propto \exp{\dfrac{-(x-x_0)}{w} ^ 4}$, where $x_0$ is the centroid and $w$ is the width in pixels. The very flat top of this function helps avoid significant variation with position, while still smoothly rolling off at the edges to avoid discontinuous artefacts. The super-Gaussian is calculated on a grid of $10\,\times$ subsampled points in pixel space so that the sharply varying edge changes column weights smoothly as a function of centroid. We then extracted photometry using apertures with a range of widths $w \in\{1.5,~2,~3,~4,~5\}$ pixels.
+In generating light curves of the \kepler smear stars, we have followed the methods described by \citet{smear}, with some improvements. We selected our input RA and Dec values from the \kepler Input Catalog (KIC) \citep{kic}, and queried MAST to find the corresponding mean pixel position for each \kepler quarter. We then measured the centroid of smear columns in the vicinity, and used these values to do raw aperture photometry. We found that the cosine-bell aperture used for raw photometry by \citet{smear} can sometimes introduce position-dependent systematics and jumps. We instead used a super-Gaussian aperture, 
 
-From this raw photometry a background light curve was subtracted, correcting for time-varying global systematics. Whereas in \citet{smear} we subtracted a background estimated manually, for this larger set of light curves, we have chosen the lowest $25\%$ of pixels by median flux as being unlikely to be contaminated by stars, and taken our background level to be the median of this at each time sample. To reduce the noise in this background model, we fitted a Gaussian Process with a 30-day timescale squared exponential kernel using \textsc{george} \citep{hodlr}, and our final background light curve is taken to be the posterior mean of this GP. 
+\begin{equation}
+A \propto \exp{\dfrac{-(x-x_0)}{w} ^ 4},
+\end{equation}
+\noindent where $x_0$ is the centroid and $w$ is the width in pixels. The very flat top of this function helps avoid significant variation with position, while still smoothly rolling off at the edges to avoid discontinuous artefacts. The super-Gaussian is calculated on a grid of $10\,\times$ subsampled points in pixel space so that the sharply varying edge changes column weights smoothly as a function of centroid. We then extracted photometry using apertures with a range of widths $w \in\{1.5,~2,~3,~4,~5\}$ pixels.
+
+From this raw photometry a background light curve was subtracted, correcting for time-varying global systematics. Whereas in \citet{smear} we subtracted a background estimated manually, for this larger set of light curves, we have chosen the lowest $25\%$ of pixels by median flux as being unlikely to be contaminated by stars, and taken our background level to be the median of this at each time sample. To reduce the noise in this background model, we fitted a Gaussian Process (GP) with a 30-day timescale squared exponential kernel using \textsc{george} \citep{hodlr}, and our final background light curve is taken to be the posterior mean of this GP. 
 
 The dominant source of residual systematic errors in nominal \kepler time series is a common-mode variation primarily due to thermal changes on board the spacecraft, an issue that is traditionally dealt with by identifying and fitting a linear combination of systematic modes \citep{pdc0,pdc1,pdc2,petigura}. We have adopted the same approach here, using the \kepler Pre-search Data Conditioning (PDC) Cotrending Basis Vectors (CBVs) available from MAST, finding least-squares fits of either the first~4 or~8 CBVs to each light curve. This can remove astrophysical signals having long timescales, and so we use and recommend 4~CBV light curves for stars with variability on timescales longer than $\sim 5$ days, or indeed raw uncorrected lightcurves for stars variable at high amplitude on $\sim$~quarter timescales, but otherwise we recommend the 8~CBV light curves. There is some room for improvement here by simultaneously modelling astrophysical and instrumental variations, but this is beyond the scope of this paper. In the following, we use the light curves with the lowest 6.5~hr Combined Differential Photometric Precision (CDPP) \citep{cdpp} out of all apertures, as calculated with the \textsc{k2sc} CDPP implementation \citep{k2sc}. This is not necessarily the optimal choice for all red giants, especially those with oscillations on a 6.5~h timescale, but is a reasonable proxy for white noise and leads to satisfactory results upon visual inspection of the present sample.
 
@@ -234,14 +239,14 @@ Among the~66 red giants identified in this sample, for~32 the timescale of their
 
 \begin{equation}
 \label{scaling}
-\numax \propto \dfrac{g}{g_{\sun}} \cdot \left(\dfrac{\teff}{\teff_{\sun}}\right)^{\dfrac{1}{2}}
+\numax \propto \dfrac{g}{g_{\sun}} \cdot \left(\dfrac{\teff}{\teff_{\sun}}\right)^{\dfrac{1}{2}},
 \end{equation}
 
 and
 
 \begin{equation}
 \label{Dnuscaling}
-\langle \Dnu \rangle \propto \sqrt{\langle \rho \rangle} = \sqrt{M {R}^{-3}}
+\langle \Dnu \rangle \propto \sqrt{\langle \rho \rangle} = \sqrt{M {R}^{-3}}.
 \end{equation}
 
 We have followed the method of \citet{2016AN....337..774D}, obtaining a Lomb-Scargle periodogram of the smoothed time series according to the method of \citet{2011MNRAS.414L...6G}. The posterior distribution of the asteroseismic parameters was obtained with a Markov Chain Monte Carlo fit to the smoothed periodogram, applying the combined granulation and oscillation model of \citet{2014A&A...570A..41K}. This consists of two Harvey profiles for the granulation \citep{1985ESASP.235..199H}, a Gaussian envelope for the stellar oscillations, and a white noise background for photon noise. The marginal posterior distribution for the oscillation envelope is well-approximated by a single Gaussian, and we have taken its median and standard deviation to be our estimates for \numax and its uncertainty.
@@ -397,7 +402,7 @@ The \kepler Smear Campaign has another natural extension: while many saturated s
 
 \section*{Acknowledgements} % add your acknowledgements text here!
 
-This work was performed in part under contract with the Jet Propulsion Laboratory (JPL) funded by NASA through the Sagan Fellowship Program executed by the NASA Exoplanet Science Institute. B.P. also acknowledges support from Balliol College and the Clarendon Fund. D.H. acknowledges support by the National Aeronautics and Space Administration through the K2 Guest Observer Program (NNX17AF76G, 80NSSC18K0362) and the National Science Foundation (AST-1717000). DWL acknowledges partial support from the Kepler Extended Mission under NASA Cooperative Agreement NNX13AB58A with the Smithsonian Astrophysical Observatory. The research leading to these results has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No670519: MAMSIE). Funding for the Stellar Astrophysics Centre is provided by The Danish National Research Foundation (Grant agreement no.: DNRF106). 
+This work was performed in part under contract with the Jet Propulsion Laboratory (JPL) funded by NASA through the Sagan Fellowship Program executed by the NASA Exoplanet Science Institute. B.P. also acknowledges support from Balliol College and the Clarendon Fund. D.H. acknowledges support by the National Aeronautics and Space Administration through the K2 Guest Observer Program (NNX17AF76G, 80NSSC18K0362) and the National Science Foundation (AST-1717000). DWL acknowledges partial support from the Kepler Extended Mission under NASA Cooperative Agreement NNX13AB58A with the Smithsonian Astrophysical Observatory. The research leading to these results has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No670519: MAMSIE). V.S.A. acknowledges support the Independent Research Fund Denmark (Research grant 7027-00096B). Funding for the Stellar Astrophysics Centre is provided by The Danish National Research Foundation (Grant agreement No.~DNRF106). 
 
 BP acknowledges being on the traditional territory of the Lenape Nations and recognizes that Manhattan continues to be the home to many Algonkian peoples. We give blessings and thanks to the Lenape people and Lenape Nations in recognition that we are carrying out this work on their indigenous homelands. We would like to acknowledge the Gadigal Clan of the Eora Nation as the traditional owners of the land on which the University of Sydney is built and on which some of this work was carried out, and pay their respects to their knowledge, and their elders past, present and future.
 
