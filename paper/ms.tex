@@ -58,10 +58,10 @@
 \newcommand{\feh}{\mbox{$\rm{[Fe/H]}$}\xspace}
 \newcommand{\msun}{\mbox{$\mathrm{M}_{\sun}$}\xspace}
 \newcommand{\rsun}{\mbox{$\mathrm{R}_{\sun}$}\xspace}
-\newcommand{\kepler}{\emph{Kepler}\xspace}
-\newcommand{\ktwo}{\emph{K2}\xspace}
-\newcommand{\hipparcos}{\emph{Hipparcos}\xspace}
-\newcommand{\gaia}{\emph{Gaia}\xspace}
+\newcommand{\kepler}{\textit{Kepler}\xspace}
+\newcommand{\ktwo}{\textit{K2}\xspace}
+\newcommand{\hipparcos}{\textit{Hipparcos}\xspace}
+\newcommand{\gaia}{\textit{Gaia}\xspace}
 
 
 
@@ -174,7 +174,7 @@ We have obtained smear light curves for our sample of red giant stars with the \
 
 We selected all stars on-silicon in \kepler with $Kp<9$ that were targeted for fewer than $8$ quarters. The majority of these were not previously targeted at all, but sixteen stars were to some extent observed conventionally: HD~174020 was targeted in LC for Q2, 6, 10, and 14; HD~175841 for Q11-12, 14-16, with SC for Q3; HD~176582 for Q12-13; HD~178090 for Q1, 3, and 10; HD~180682 for Q0, 3, and 7; HD~181069 for Q1, 10, 13, 14, and 17; HD~181878 for Q14-17; HD~182694 for Q2; HD~183124 for even quarters; HD~185351 for Q1-3 and with SC for Q16; HD~186155 for only Q1; HD~187217 for Q14-17; HD~188252 for only Q13; HD~189013 with SC for Q3 as a $\gamma$~Dor; V380~Cyg for Q11 and with SC for Q7, 9, 10, 12-17; and V819~Cyg for Q14, 16 and 17. A number of these lay at the edge of a detector, with the result that in some cadences the centroid of the star did not lie on the chip; light curves from these targets were found to be of extremely low quality and all of these stars were discarded. After applying these criteria we obtained a list of 102 targets, which are listed in Table~\ref{all_stars} with their \kepler magnitude $Kp$, together with their spectral type from SIMBAD, \gaia~DR2 apparent~$G$ magnitudes and $Bp-Rp$ colours, \gaia~DR2 calibrated distances from \citet{gaiadists}, variability classification and availability of TRES spectroscopy. The \kepler spacecraft rotates between quarters, so that it cycles through four orientation `seasons' each rotated from the last by $90^{\circ}$. Some stars were not on silicon for all seasons: we have only one season of HD~179394; two for HD~187277, HD~226754, V554~Lyr, and BD+47~2891; and three for BD+43~3064. The addition of our sample to the conventionally-observed stars makes the \kepler survey magnitude-complete down to $Kp=9$ for all stars on-silicon.
 
-Figure~\ref{hrdiagram} shows these stars on a colour-magnitude diagram using \gaia $Bp-Rp$ and absolute~$G$ magnitudes and \gaia~DR2 calibrated distances \citep{gaiadists}, overlaid on the \kepler sample from the Bedell \url{gaia-kepler.fun} crossmatch. The smear targets in this diagram selected to have higher apparent brightnesses than the general \kepler population, appear also to have higher intrinsic luminosities. While this could simply arise from being selected for their apparent brightness, it is {}worth considering whether this is because of a bias in their parallax measurements. While \gaia parallaxes for very bright stars can be subject to systematic error, we have compared to \emph{Hipparcos} \citep{vanleeuwen07b}, and found close agreement for the brightest stars, with a scatter that increases with magnitude. We therefore suggest that parallax bias is not the reason for the smear sample sitting above the majority of the \kepler sample.
+Figure~\ref{hrdiagram} shows these stars on a colour-magnitude diagram using \gaia $Bp-Rp$ and absolute~$G$ magnitudes and \gaia~DR2 calibrated distances \citep{gaiadists}, overlaid on the \kepler sample from the Bedell \url{gaia-kepler.fun} crossmatch. The smear targets in this diagram selected to have higher apparent brightnesses than the general \kepler population, appear also to have higher intrinsic luminosities. While this could simply arise from being selected for their apparent brightness, it is {}worth considering whether this is because of a bias in their parallax measurements. While \gaia parallaxes for very bright stars can be subject to systematic error, we have compared to \hipparcos \citep{vanleeuwen07b}, and found close agreement for the brightest stars, with a scatter that increases with magnitude. We therefore suggest that parallax bias is not the reason for the smear sample sitting above the majority of the \kepler sample.
 
 We identify the evolutionary state of main-sequence versus evolved stars from the \gaia colour-magnitude diagram in Figure~\ref{hrdiagram}. Taking a cutoff in \gaia $Bp-Rp > 1$, we identify 66 of these stars as evolved systems, and the remaining~36 lie on the main-sequence. 
 
@@ -338,16 +338,16 @@ We note that one of the stars (HD~175740) can also be found in the Hypatia catal
 \subsubsection{Red Clump Stars}
 \label{clumpstars}
 
-Red clump stars, which burn helium in their cores, can be distinguished from hydrogen-shell burning giants asteroseismologically, via their much higher \emph{g}-mode period spacings \citep{rggmodehelium}. 
+Red clump stars, which burn helium in their cores, can be distinguished from hydrogen-shell burning giants asteroseismologically, via their much higher \textit{g}-mode period spacings \citep{rggmodehelium}. 
 The term `red clump' arises from the fact that such stars can have a very narrow range of luminosities, so that they appear as a clump in the HR diagram \citep{2016ARA&A..54...95G}. This property makes them useful standard candles to which distances can be accurately computed from photometry. Red clump stars have been used to calibrate the \gaia survey's parallaxes at long distances \citep{2017A&A...598L...4D,2017MNRAS.471..722H,2018A&A...609A.116R}. \gaia~DR2 parallaxes have a zero-point offset of $\sim 0.03$~mas \citep{gaiadr2parallax}, and hierarchical models of the ensemble of \gaia clump stars can be used to accurately estimate this and thereby improve the accuracy of \gaia distances greater than a few~kpc (Hawkins et al., in prep.).
 
-From inspection of the power spectra, HD~181069, HD~183124, HD~182354, HD~182692, and HD~180658 are seen to be red clump stars. A power spectrum of the best example of these, HD~183124, together with a period \'{e}chelle diagram used to estimate its \emph{g}-mode period spacing, are shown in Figure~\ref{HD_183124}. While precise characterization of these stars is beyond the scope of this paper, they are ideal candidates for anchoring models of the mass and metallicity dependence of red clump properties for calibrating \gaia and other distance measures. 
+From inspection of the power spectra, HD~181069, HD~183124, HD~182354, HD~182692, and HD~180658 are seen to be red clump stars. A power spectrum of the best example of these, HD~183124, together with a period \'{e}chelle diagram used to estimate its \textit{g}-mode period spacing, are shown in Figure~\ref{HD_183124}. While precise characterization of these stars is beyond the scope of this paper, they are ideal candidates for anchoring models of the mass and metallicity dependence of red clump properties for calibrating \gaia and other distance measures. 
 
 \begin{figure*}
 \noindent\includegraphics[width=19cm,keepaspectratio]{HD_183124.png}
 
 \caption{\label{HD_183124}
-Power spectrum (left) and period \'{e}chelle diagram (right) of the solar-like oscillations of the red clump star HD~183124. The modes in the power spectrum used for the period \'{e}chelle diagram are highlighted with blue dots. In the period \'{e}chelle diagram we see the characteristic pattern of `bumped' modes from avoided crossings between the comb of \emph{p}-modes and \emph{g}-mode oscillations with a period spacing of $\Delta \Pi = 300.1~\text{s}$.}
+Power spectrum (left) and period \'{e}chelle diagram (right) of the solar-like oscillations of the red clump star HD~183124. The modes in the power spectrum used for the period \'{e}chelle diagram are highlighted with blue dots. In the period \'{e}chelle diagram we see the characteristic pattern of `bumped' modes from avoided crossings between the comb of \textit{p}-modes and \textit{g}-mode oscillations with a period spacing of $\Delta \Pi = 300.1~\text{s}$.}
 \end{figure*}
 
 
