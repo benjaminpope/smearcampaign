@@ -291,15 +291,14 @@ To achieve the most precise abundances we have derived them both with and withou
 We determined the mass, radius, and age for the 33 red giants from their atmospheric and asteroseismic observables (see Table~\ref{astero_table}) using the BAyesian STellar Algorithm \citep[\textsc{basta}][]{silvaaguirre2015,silvaaguirre2017}. \textsc{basta} compares the observed properties with predictions from theoretical models of stellar evolution, in this case the recently updated BaSTI (a Bag of Stellar Tracks and Isochrones) stellar models and isochrones library \citep{Hidalgo:2018dy}. No diffusion or rotational mixing was included, while core overshoot with an efficiency of 0.20 times the pressure scale height as described in \citet{Hidalgo:2018dy}.
 
 The spectroscopic properties are the effective temperature \teff, the metallicity \feh, and the surface gravities \logg from Table~\ref{stellar_props}. These are accompanied by the global asteroseismic properties \Dnu and \numax from Table~\ref{astero_table}. Theoretical predictions of \Dnu and \numax were computed using the asteroseismic scaling relation for any point along an evolutionary track or isochrone. For the solar values, we adopted $\nu_{\text{max, }\odot}=3090$~$\mu$Hz, $\Delta\nu_{\odot}=135.1$~$\mu$Hz \citep{huber2011}, and $T_{\text{eff, }\odot}=5777$~K.
+\newpage
 
 The accuracy of the asteroseismic scaling relations across different metallicities, effective temperatures, and evolutionary status is currently under discussion \citep[see][]{white2011,belkacem2011,sharma2016,viani2017}.
 We applied the correction by \cite{Serenelli:2017cn} to the large frequency separation relation in Equation~\ref{Dnuscaling} as it has been shown to reproduce the results of a number of classical age determination for the open clusters M67 \citep{stello2016} and NGC~6819 \citep{casagrande2016}.
 
 We compare the solutions found using this set of fitting parameters with those found using only asteroseismic input in Figure~\ref{masses}, and we find that the change in median stellar parameters between the two results is small for all analyzed red giants. However, in the comparison plot it becomes clear that adding the spectroscopic constraints to the fit reduces the posterior uncertainty in stellar mass.
 
-To gauge the level of improvement in our understanding of these stars, in Figure~\ref{gaia_comparison} we plot the radii determined here against those from the \gaia~DR2 catalog determined by the stellar bolometric flux and parallax. While not all of our targets have \gaia radii, we find that while there is overall agreement to within a few $\sigma$, the results from stellar modelling are consistently slightly larger than those from \gaia. One star noticeably very different: BD+39~3577 has a precise \gaia radius of $9.14^{+0.25}_{-0.13}$~\rsun, but $24.78^{+0.88}_{-0.72}$~\rsun from modelling. 
-% Likewise BD+42~3150 has a \gaia radius of $15.70^{+0.52}_{-0.76}$~\rsun but $11.27^{+0.39}_{-0.41}$~\rsun from stellar modelling.
-It is unclear why this would be the case; it is possible that an unidentified binary companion has affected either the asteroseismic detection or parallax. 
+To gauge the level of improvement in our understanding of these stars, in Figure~\ref{gaia_comparison} we plot the radii determined here against those from the \gaia~DR2 catalog determined by the stellar bolometric flux and parallax.  We also calculate \gaia-like stellar bolometric radii using \texttt{isoclassify} \citep{huber2017} using our new spectroscopic \teff measurements rather than those from \gaia~DR2, together with \gaia~DR2 parallaxes spectroscopic \logg, $Z$, and SIMBAD $V$. While not all of our targets have \gaia radii, we find that while there is overall agreement to within a few $\sigma$, the results from stellar modelling are consistently slightly larger than those from \gaia. This discrepancy goes away for most stars when we use our own \texttt{isoclassify} radii, suggesting that this is an effect of \teff calibration. Two stars are noticeably very different: BD+39~3577 has a precise \gaia radius of $9.14^{+0.25}_{-0.13}$~\rsun, but $24.78^{+0.88}_{-0.72}$~\rsun from modelling. It is unclear why this would be the case; it is possible that an unidentified binary companion has affected either the asteroseismic detection or parallax. Likewise BD+42~3150 has a \gaia radius of $15.70^{+0.52}_{-0.76}$~\rsun but $11.27^{+0.39}_{-0.41}$~\rsun from stellar modelling, but of our sample it has the lowest \gaia parallax over error at only 18.0, and this anomalously high value is likely noise. Agreement for large-radius ($>30 \rsun$) stars is poorer, even though the \gaia parallax-over-error is apparently adequate. This disagreement, unlike for medium radius stars, is pronounced mainly for the \texttt{isoclassify} radii rather than \gaia~DR2, suggesting that our $V$ band bolometric corrections for these more yellow (\gaia $Bp-Rp \sim 0.25$) stars are insufficiently accurate. 
 
 \begin{figure}
 % \noindent\includegraphics[width=17cm,keepaspectratio]{different_constraints_fullsample_ove02.pdf}
@@ -312,10 +311,10 @@ Using asteroseismic constraints only (red) and asteroseismic and spectroscopic c
 
 
 \begin{figure}
-\noindent\includegraphics[width=8.5cm,keepaspectratio]{gaia_comparison.eps}
+\noindent\includegraphics[width=8.5cm,keepaspectratio]{combined_radii.eps}
 
 \caption{\label{gaia_comparison}
-A comparison of the stellar radii determined here from asteroseismology and spectroscopy to those from the \gaia~DR2 catalogue. The catalogues disagree in most cases very significantly.}
+A comparison of the stellar radii determined here from asteroseismology and spectroscopy to those from the \gaia~DR2 catalogue and from our own calculations based on \gaia parallaxes and TRES spectroscopy. There is overall good agreement except for very large radii, except for BD+39~3577 (marked), which we do not understand.}
 \end{figure}
 
 \subsubsection{Chemical Compositions}
