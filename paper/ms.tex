@@ -46,7 +46,7 @@
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{xspace}
-
+\usepackage{fontawesome}
 
 % added by DH
 \newcommand{\numax}{\mbox{$\nu_{\rm max}$}\xspace}
@@ -87,19 +87,19 @@ Timothy R. White,$^{7,5}$\newauthor
 Amalie Stokholm,$^{5}$
 Allyson Bieryla,$^{8}$
 David W. Latham,$^{8}$
-Conny Aerts,$^{9,10}$\newauthor
+Madeline Lucey,$^{6}$\newauthor
+Conny Aerts,$^{9,10}$
 Suzanne Aigrain,$^{3}$ 
 Victoria Antoci,$^{5}$
-Timothy R. Bedding,$^{11,5}$
-Dominic M. Bowman,$^{9}$\newauthor
+Timothy R. Bedding,$^{11,5}$\newauthor
+Dominic M. Bowman,$^{9}$
 Ashley Chontos,$^{12}$
 Gilbert A. Esquerdo,$^{8}$
-Daniel Huber,$^{12}$
-Paula Jofr\'{e},$^{13}$\newauthor
-Madeline Lucey,$^{6}$
+Daniel Huber,$^{12}$\newauthor
+Paula Jofr\'{e},$^{13}$
 Simon J. Murphy,$^{11,5}$
-Timothy van Reeth,$^{11,5}$\newauthor
-Victor Silva Aguirre,$^{5}$
+Timothy van Reeth,$^{11,5}$
+Victor Silva Aguirre,$^{5}$\newauthor
 Jie Yu$^{11,5}$ 
 \\
 % List of institutions
@@ -131,7 +131,7 @@ $^{13}$N\'{u}cleo de Astronom\'{i}a, Facultad de Ingenier\'{i}a y Ciencias, Univ
 
 % Abstract of the paper
 \begin{abstract}
-We present the first data release of the \kepler Smear Campaign, using collateral `smear' data obtained in the \kepler four-year mission to reconstruct light curves of 102~stars too bright to have been otherwise targeted. We describe the pipeline developed to extract and calibrate these light curves, and show that we attain photometric precision comparable to stars analyzed by the standard pipeline in the nominal \kepler mission. In this paper, aside from publishing the light curves of these stars, we focus on 66~red giants for which we detect solar-like oscillations, characterizing 33 of these in detail with spectroscopic chemical abundances and asteroseismic masses as benchmark stars. We also classify the whole sample, finding nearly all to be variable, with classical pulsations and binary effects. All source code, light curves, TRES spectra, and asteroseismic and stellar parameters are publicly available as a \kepler legacy sample.
+We present the first data release of the \kepler Smear Campaign, using collateral `smear' data obtained in the \kepler four-year mission to reconstruct light curves of 102~stars too bright to have been otherwise targeted. We describe the pipeline developed to extract and calibrate these light curves, and show that we attain photometric precision comparable to stars analyzed by the standard pipeline in the nominal \kepler mission. In this paper, aside from publishing the light curves of these stars, we focus on 66~red giants for which we detect solar-like oscillations, characterizing 33 of these in detail with spectroscopic chemical abundances and asteroseismic masses as benchmark stars. We also classify the whole sample, finding nearly all to be variable, with classical pulsations and binary effects. All source code, light curves, TRES spectra, and asteroseismic and stellar parameters are publicly available as a \kepler legacy sample. \href{https://github.com/benjaminpope/k2halo}{\faGithub}
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -322,7 +322,7 @@ A comparison of the stellar radii determined here from asteroseismology and spec
 The chemical composition for each star was measured in the $\alpha$ (Mg, Ti, Si, Ca), odd-Z (Al, V) and Fe-peak (Fe, Ni) elemental families in a differential way with respect to Arcturus. The chemical composition for the neutron-capture elements are shown in Fig.~\ref{fig:ncap}, and were derived in absolute terms rather than differentially with respect to Arcturus. The elemental abundance ratios were measured in order to determine the Galactic populations to which these stars belong. The metallicities, which are tabulated in Table~\ref{stellar_props}, are too high (with $-0.51<$~[M/H]~$<$ +0.14~dex) to belong to the Galactic halo, whose peak metallicity is around $\sim -1.50$ \cite[e.g.][]{Chiba2000}. Furthermore, the distance distribution (Table~\ref{all_stars}) indicates that all stars are located within a few~kpc of the Sun and are not part of the Galactic bulge. Thus, these stars are drawn from only the Galactic thick and thin disks. We provide a detailed chemical abundance analysis below to support this claim.\\
 
 \begin{figure*}
-\noindent\includegraphics[width=0.7\textwidth,keepaspectratio]{chem_pope.png}
+\noindent\includegraphics[width=0.7\textwidth,keepaspectratio]{Pope_alpha_oddZ.pdf}
 
 \caption{\label{alphael}
 The [Mg/Fe], [Si/Fe], [Ti/Fe], [V/Fe] (left panel) and [Al/Fe], [Ca/Fe], [Ni/Fe], [Cr/Fe] (right panel) abundance ratios as a function of iron for our stars (black circles). We also show a representative sample of Galactic disk stars from \citet[open red squares]{Bensby2014}, \citet[open orange squares]{Adibekyan2012}, and \citet[light green circles]{Battistini2015}. These elemental ratios show that the chemical composition of our sample is consistent with the Galactic disk population. } %Mg was chosen as an illustrative $\alpha$-element. } 
@@ -337,7 +337,7 @@ For most of the stars in our sample, the [Mg/Fe] abundance ratios are enhanced. 
 
 In addition, to the $\alpha$ and odd-Z elements we also derived the chemical abundance for several neutron capture elements including Sr, Zr, La, Eu (left panel of Fig~\ref{fig:ncap}) as well as Y, Ba, and Nd (right panel of Fig.~\ref{fig:ncap}).  It is clear from Fig.~\ref{fig:ncap}  that the chemical abundance ratio of each neutron capture element is consistent with the Galactic disk population. The Ba of our sample is slightly enhanced, however, while the Y of our sample is slightly reduced relative to the general disk population of \cite{Bensby2014}. Nevertheless, we conclude all elemental abundance ratios studied our sample most closely resemble the Galactic disk. 
 \begin{figure*}
-\noindent\includegraphics[width=0.7\textwidth,keepaspectratio]{chem_ncap_pope.pdf}
+\noindent\includegraphics[width=0.7\textwidth,keepaspectratio]{Pope_ncap.pdf}
 
 \caption{\label{fig:ncap}
 The [Mg/Fe], [Si/Fe], [Ti/Fe], [V/Fe] (left panel) and [Al/Fe], [Ca/Fe], [Ni/Fe], [Cr/Fe] (right panel) abundance ratios as a function of iron for our stars (black circles). We also show a representative sample of Galactic disk stars from \citet[open red square,][]{Bensby2014}, \citet[green circles][]{Battistini2016}. These elemental ratios give a representive example of the chemical composition of our sample and show they are consistent with the Galactic disk population. } %Mg was chosen as an illustrative $\alpha$-element. } 
