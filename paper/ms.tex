@@ -21,7 +21,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic setup. Most papers should leave these options alone.
-\documentclass[a4paper,fleqn,usenatbib]{mnras}
+% \documentclass[a4paper,fleqn,usenatbib]{mnras}
+\documentclass[modern]{aastex62}
+
 
 % MNRAS is set in Times font. If you don't have this installed (most LaTeX
 % installations will be fine) or prefer the old Computer Modern fonts, comment
@@ -62,7 +64,14 @@
 \newcommand{\ktwo}{\textit{K2}\xspace}
 \newcommand{\hipparcos}{\textit{Hipparcos}\xspace}
 \newcommand{\gaia}{\textit{Gaia}\xspace}
+\definecolor{linkcolor}{rgb}{0.1216,0.4667,0.7059}
 
+
+\usepackage{xcolor, fontawesome}
+\definecolor{twitterblue}{RGB}{64,153,255}
+\newcommand\twitter[1]{\href{https://twitter.com/#1 }{\textcolor{twitterblue}{\faTwitter}\,\tt \textcolor{twitterblue}{@#1}}}
+
+\submitjournal{ApJ}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,69 +85,103 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+\begin{document}
 
-\title[The Kepler Smear Campaign]{The \textit{Kepler} Smear Campaign: Light curves for 102 Very Bright Stars}
+\title{The \textit{Kepler} Smear Campaign: Light curves for 102 Very Bright Stars}
+\shorttitle{The Kepler Smear Campaign}
+\shortauthors{B. J. S. Pope et al.}
+
+
+
+\correspondingauthor{Benjamin J. S. Pope \twitter{fringetracker}}
+\email{benjamin.pope@nyu.edu}
+
+\author[0000-0003-2595-9114]{Benjamin J. S. Pope}
+\affiliation{Center for Cosmology and Particle Physics, Department of Physics, New York University, 726 Broadway, New York, NY 10003, USA}
+\affiliation{NASA Sagan Fellow}
+\affiliation{Oxford Astrophysics, Denys Wilkinson Building, University of Oxford, OX1 3RH, Oxford, UK}
+
+\author[0000-0002-4290-7351]{Guy R. Davies}
+\affiliation{School of Physics and Astronomy, University of Birmingham, Birmingham B15 2TT, UK}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, Ny Munkegade 120, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0002-1423-2174]{Keith Hawkins}
+\affiliation{Department of Astronomy, The University of Texas at Austin, 2515 Speedway Boulevard, Austin, TX 78712, USA}
+
+\author[0000-0002-6980-3392]{Timothy R. White}
+\affiliation{Research School of Astronomy and Astrophysics, Mount Stromlo Observatory, The Australian National University, Canberra, ACT 2611, Australia}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, Ny Munkegade 120, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0002-5496-365X]{Amalie Stokholm}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, Ny Munkegade 120, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0001-6637-5401]{Allyson Bieryla}
+\affiliation{Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA}
+
+\author[0000-0001-9911-7388]{David W. Latham}
+\affiliation{Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA}
+
+\author{Madeline Lucey}
+\affiliation{Department of Astronomy, The University of Texas at Austin, 2515 Speedway Boulevard, Austin, TX 78712, USA}
+
+\author[0000-0003-1822-7126]{Conny Aerts}
+\affiliation{Instituut voor Sterrenkunde, KU Leuven, Celestijnenlaan 200D, B-3001 Leuven, Belgium}
+\affiliation{Department of Astrophysics, IMAPP, Radboud University Nijmegen, P.O. Box 9010, NL-6500 GL Nijmegen, The Netherlands}
+
+\author[0000-0003-1453-0574]{Suzanne Aigrain}
+\affiliation{Oxford Astrophysics, Denys Wilkinson Building, University of Oxford, OX1 3RH, Oxford, UK}
+
+\author[0000-0002-0865-3650]{Victoria Antoci}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, Ny Munkegade 120, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0001-5222-4661]{Timothy R. Bedding}
+\affiliation{Sydney Institute for Astronomy, School of Physics A28, The University of Sydney, NSW 2006, Australia}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0001-7402-3852]{Dominic W. Bowman}
+\affiliation{Instituut voor Sterrenkunde, KU Leuven, Celestijnenlaan 200D, B-3001 Leuven, Belgium}
+
+\author[0000-0003-1125-2564	]{Ashley Chontos}
+\affiliation{Institute for Astronomy, University of Hawai'i, 2680 Woodlawn Drive, Honolulu, HI 96822, USA}
+
+\author[0000-0002-9789-5474]{Gilbert A. Esquerdo}
+\affiliation{Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA}
+
+\author[0000-0001-8832-4488 ]{Daniel Huber}
+\affiliation{Institute for Astronomy, University of Hawai'i, 2680 Woodlawn Drive, Honolulu, HI 96822, USA}
+\affiliation{SETI Institute, 189 Bernardo Avenue, Mountain View, CA 94043, USA}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0002-0722-7406]{Paula Jofr\'{e}}
+\affiliation{N\'{u}cleo de Astronom\'{i}a, Facultad de Ingenier\'{i}a y Ciencias, Universidad Diego Portales, Ej\'{e}rcito 441, Santiago De, Chile}
+
+\author[0000-0002-5648-3107]{Simon J. Murphy}
+\affiliation{Sydney Institute for Astronomy, School of Physics A28, The University of Sydney, NSW 2006, Australia}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0003-2771-1745]{Timothy van Reeth}
+\affiliation{Sydney Institute for Astronomy, School of Physics A28, The University of Sydney, NSW 2006, Australia}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0002-6137-903X]{Victor Silva Aguirre}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark}
+
+\author[0000-0002-0007-6211]{Jie Yu}
+\affiliation{Sydney Institute for Astronomy, School of Physics A28, The University of Sydney, NSW 2006, Australia}
+\affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark}
 
 % This author list is not final! If you think you should be in a different position please do not hesitate to say so.
-\author[B. J. S. Pope et al.]{Benjamin J. S. Pope,$^{1,2,3}$\thanks{E-mail: benjamin.pope@nyu.edu}
-Guy R. Davies,$^{4,5}$
-Keith Hawkins,$^{6}$
-Timothy R. White,$^{7,5}$\newauthor
-Amalie Stokholm,$^{5}$
-Allyson Bieryla,$^{8}$
-David W. Latham,$^{8}$
-Madeline Lucey,$^{6}$\newauthor
-Conny Aerts,$^{9,10}$
-Suzanne Aigrain,$^{3}$ 
-Victoria Antoci,$^{5}$
-Timothy R. Bedding,$^{11,5}$\newauthor
-Dominic M. Bowman,$^{9}$
-Ashley Chontos,$^{12}$
-Gilbert A. Esquerdo,$^{8}$
-Daniel Huber,$^{12}$\newauthor
-Paula Jofr\'{e},$^{13}$
-Simon J. Murphy,$^{11,5}$
-Timothy van Reeth,$^{11,5}$
-Victor Silva Aguirre,$^{5}$\newauthor
-Jie Yu$^{11,5}$ 
-\\
-% List of institutions
-$^{1}$Center for Cosmology and Particle Physics, Department of Physics, New York University, 726 Broadway, New York, NY 10003, USA\\
-$^{2}$NASA Sagan Fellow\\
-$^{3}$Oxford Astrophysics, Denys Wilkinson Building, University of Oxford, OX1 3RH, Oxford, UK\\
-$^{4}$School of Physics and Astronomy, University of Birmingham, Birmingham B15 2TT, UK\\
-$^{5}$Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, Ny Munkegade 120, DK-8000 Aarhus C, Denmark\\
-$^{6}$Department of Astronomy, The University of Texas at Austin, 2515 Speedway Boulevard, Austin, TX 78712, USA\\
-$^{7}$Research School of Astronomy and Astrophysics, Mount Stromlo Observatory, The Australian National University, Canberra, ACT 2611, Australia\\
-$^{8}$Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA\\
-$^{9}$Institute of Astronomy, KU Leuven, Celestijnenlaan 200D, B-3001 Leuven, Belgium\\
-$^{10}$Department of Astrophysics, IMAPP, Radboud University Nijmegen, P.O. Box 9010, 6500 GL Nijmegen, The Netherlands\\
-$^{11}$Sydney Institute for Astronomy (SIfA), School of Physics, University of Sydney, NSW 2006, Australia\\
-$^{12}$Institute for Astronomy, University of Hawai'i, 2680 Woodlawn Drive, Honolulu, HI 96822, USA\\
-$^{13}$N\'{u}cleo de Astronom\'{i}a, Facultad de Ingenier\'{i}a y Ciencias, Universidad Diego Portales, Ej\'{e}rcito 441, Santiago De, Chile\\
-}
 
-% These dates will be filled out by the publisher
-\date{Accepted XXX. Received YYY; in original form ZZZ}
-
-\pubyear{2018}
-
-% Don't change these lines
-\begin{document}
-\label{firstpage}
-\pagerange{\pageref{firstpage}--\pageref{lastpage}}
-\maketitle
 
 % Abstract of the paper
 \begin{abstract}
-We present the first data release of the \kepler Smear Campaign, using collateral `smear' data obtained in the \kepler four-year mission to reconstruct light curves of 102~stars too bright to have been otherwise targeted. We describe the pipeline developed to extract and calibrate these light curves, and show that we attain photometric precision comparable to stars analyzed by the standard pipeline in the nominal \kepler mission. In this paper, aside from publishing the light curves of these stars, we focus on 66~red giants for which we detect solar-like oscillations, characterizing 33 of these in detail with spectroscopic chemical abundances and asteroseismic masses as benchmark stars. We also classify the whole sample, finding nearly all to be variable, with classical pulsations and binary effects. All source code, light curves, TRES spectra, and asteroseismic and stellar parameters are publicly available as a \kepler legacy sample. \href{https://github.com/benjaminpope/smearcampaign}{\faGithub}
+We present the first data release of the \kepler Smear Campaign, using collateral `smear' data obtained in the \kepler four-year mission to reconstruct light curves of 102~stars too bright to have been otherwise targeted. We describe the pipeline developed to extract and calibrate these light curves, and show that we attain photometric precision comparable to stars analyzed by the standard pipeline in the nominal \kepler mission. In this paper, aside from publishing the light curves of these stars, we focus on 66~red giants for which we detect solar-like oscillations, characterizing 33 of these in detail with spectroscopic chemical abundances and asteroseismic masses as benchmark stars. We also classify the whole sample, finding nearly all to be variable, with classical pulsations and binary effects. All source code, light curves, TRES spectra, and asteroseismic and stellar parameters are publicly available as a \kepler legacy sample. \href{https://github.com/benjaminpope/smearcampaign}{\color{linkcolor}\faGithub}
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
-\begin{keywords}
-asteroseismology -- techniques: photometric -- stars: variable: general
-\end{keywords}
+\keywords{asteroseismology -- techniques: photometric -- stars: variable: general
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -171,7 +214,9 @@ We have made all new data products and software discussed in this paper publicly
 
 We selected all stars on-silicon in \kepler with $Kp<9$ that were targeted for fewer than $8$ quarters. The majority of these were not previously targeted at all, but sixteen stars were to some extent observed conventionally; these are listed in Table~\ref{quarters}. A number of these lay at the edge of a detector, with the result that in some cadences the centroid of the star did not lie on the chip; light curves from these targets were found to be of extremely low quality and all of these stars were discarded. After applying these criteria we obtained a list of 102 targets, which are listed in Table~\ref{all_stars} with their \kepler magnitude $Kp$, together with their spectral type from SIMBAD, \gaia~DR2 apparent~$G$ magnitudes and $Bp-Rp$ colours, \gaia~DR2 calibrated distances from \citet{gaiadists}, variability classification and availability of TRES spectroscopy. The \kepler spacecraft rotates between quarters, so that it cycles through four orientation `seasons' each rotated from the last by $90^{\circ}$. Some stars were not on silicon for all seasons: we have only one season of HD~179394; two for HD~187277, HD~226754, V554~Lyr, and BD+47~2891; and three for BD+43~3064. The addition of our sample to the conventionally-observed stars makes the \kepler survey magnitude-complete down to $Kp=9$ for all stars on-silicon.
 
-\input{quarters.tex}
+% \input{quarters.tex}
+\input{quarters_apj.tex}
+
 
 Figure~\ref{hrdiagram} shows these stars on a colour-magnitude diagram using \gaia $Bp-Rp$ and absolute~$G$ magnitudes and \gaia~DR2 calibrated distances \citep{gaiadists}, overlaid on the \kepler sample from the Bedell \url{gaia-kepler.fun} crossmatch. The smear targets in this diagram selected to have higher apparent brightnesses than the general \kepler population, appear also to have higher intrinsic luminosities. While this could simply arise from being selected for their apparent brightness, it is {}worth considering whether this is because of a bias in their parallax measurements. While \gaia parallaxes for very bright stars can be subject to systematic error, we have compared to \hipparcos \citep{vanleeuwen07b}, and found close agreement for the brightest stars, with a scatter that increases with magnitude. We therefore suggest that parallax bias is not the reason for the smear sample sitting above the majority of the \kepler sample.
 
@@ -198,7 +243,7 @@ The dominant source of residual systematic errors in nominal \kepler time series
 
 
 \begin{figure*}
-\noindent\includegraphics[width=15cm,keepaspectratio]{gaia_kepler_hr.png}
+\plotone{gaia_kepler_hr.png}
 
 \caption{\label{hrdiagram}
 \gaia colour-magnitude diagram of the Smear Campaign stars (orange and teal) overlaid on the sample of \kepler stars with \gaia parallax $\text{SNR} > 25$ (black), using the Bedell \url{gaia-kepler.fun} crossmatch and \gaia~DR2 calibrated distances from \citet{gaiadists}. The smear sample includes giants and hot main-sequence stars. Those giants for which TRES spectroscopy have been obtained are highlighted in teal. An interactive version of this diagram is available as supplementary material from the journal or at \url{benjaminpope.github.io/data/cmd_smear.html}.}
@@ -215,22 +260,22 @@ We can assess the importance of this contamination by considering differences be
 In the case of HD~181878, a red giant on Module~13, there is clear and significant contamination from a star with several low-frequency pulsations, as is seen in Figure~\ref{contamination}. Likewise the light curve for HD 183383, which variously falls on Modules~8, 12, 14 and~18, shows different behaviour for different quarters: some parts are likely from an ellipsoidal variable with a period of 6.46 days, while other quarters are contaminated by the star RR Lyrae. Between seasons, there is an extra hump of power near the red giant oscillations in HD~175740; extra low frequency power in HD~180658; one coherent peak in  HD~182694; high frequency contamination in HD~181597 possibly from an EB; and a very significant difference in amplitude between seasons for BD~+39~3882. In other cases visual inspection does not show severe contamination, but in all cases we recommend that users of these light curves carefully check for differences between quarters, as well as investigating the full frame images for potential contaminants.
 
 \begin{figure}
-\noindent\includegraphics[width=8cm,keepaspectratio]{contam_HD_181778.png}
-
+\plotone{contam_HD_181778.pdf}
 \caption{\label{contamination}
 Power spectra of odd and even quarters of HD~181778. It is clear from inspection that while odd quarters have the power spectrum expected of a giant star, even quarters have very high amplitude coherent oscillations.}
 \end{figure}
 
 
 \begin{figure}
-\noindent\includegraphics[width=8cm,keepaspectratio]{contam.eps}
+\plotone{contam.eps}
 
 \caption{\label{contamination2}
 Histogram over overlap integrals of smoothed periodograms of odd and even quarters for each star in the sample. The peak at $\sim 0.91$ contains normal stars with limited contamination; we investigate the 22 stars with overlaps below 0.9 for which there is a significant possibility of contamination.}
 \end{figure}
 
-\input{all_stars.tex}
-\input{all_Stars2.tex}
+% \input{all_stars.tex}
+% \input{all_Stars2.tex}
+\input{all_stars_apj.tex}
 
 \subsection{Asteroseismology}
 \label{asteroseismology}
@@ -257,7 +302,7 @@ We obtained good estimates of these asteroseismic parameters for 33 targets, pre
 
 For eight stars, we found that the asteroseismic fit is unsatisfactory: for BD+39~388 we cannot detect the expected oscillations; for BD+43~3064 there are significant peaks but these are not consistent with the pattern expected from a red giant; for HD~179959 and HD~187217 we suspect contamination with the oscillations of a second giant, which is hard to remove from smear light curves; for HD~188629, HD~188639 and HD~188875 we can extract a \numax but not a robust \Dnu. The `retired~A star' HD~185351 \citep[studied by][]{2014ApJ...794...15J}, has a mode envelope that is not well fit by our model. The smear light curve for this star has already been published by \citet{2017MNRAS.464.3713H}, who showed with detailed asteroseismic modelling that it had a zero-age main-sequence mass of $\sim 1.60 \msun$ (a so-called `retired~A star') and used it to calibrate the convective overshoot parameter for low-luminosity red giants. The global asteroseismic modelling presented here should therefore be considered to be superseded by the more detailed model of \citet{2017MNRAS.464.3713H}. 
 
-\input{astero_table.tex}
+\input{astero_table_apj.tex}
 
 \subsection{Spectroscopy}
 \label{spectroscopy}
@@ -275,11 +320,9 @@ Individual elemental abundances were derived by first fixing the stellar atmosph
 
 To achieve the most precise abundances we have derived them both with and without a line-by-line differential approach with respect to Arcturus ($\alpha$~Bo\"{o}tis), using the method described by \citet{hawkinsapogee} and the Arcturus abundances from \citet{gaiabenchmark4}. Choosing this method means we do not derive the abundances for neutron capture  elements (e.g. Sr, Y, Zr, Ba, La, Nd, Eu) in a differential way because there are no estimated values for these elements at the appropriate benchmark parameters of Arcturus. For these elements we instead derived the chemical abundances in an absolute way, where the solar abundances of \cite{Asplund2005} were assumed. The uncertainty in the abundances are either the line-by-line dispersion, or assumed to be 0.10 when just one line is available. No abundances for oxygen could be reliably derived for any of the stars in our spectroscopic sample by either method.
 
-
-\input{stellar_props.tex}
-
-\input{abundances_1.tex}
-\input{abundances_2.tex}
+\input{stellar_props_apj.tex}
+\input{abundances_1_apj.tex}
+\input{abundances_2_apj.tex}
 
 \section{Results}
 \label{targets}
@@ -290,7 +333,6 @@ To achieve the most precise abundances we have derived them both with and withou
 We determined the mass, radius, and age for the 33 red giants from their atmospheric and asteroseismic observables (see Table~\ref{astero_table}) using the BAyesian STellar Algorithm \citep[\textsc{basta}][]{silvaaguirre2015,silvaaguirre2017}. \textsc{basta} compares the observed properties with predictions from theoretical models of stellar evolution, in this case the recently updated BaSTI (a Bag of Stellar Tracks and Isochrones) stellar models and isochrones library \citep{Hidalgo:2018dy}. The isochrones include core overshooting with an efficiency of 0.20 times the pressure scale height as described in \citet{Hidalgo:2018dy}, but do not include diffusion or rotational mixing.
 
 The spectroscopic properties are the effective temperature \teff, the metallicity \feh, and the surface gravities \logg from Table~\ref{stellar_props}. These are accompanied by the global asteroseismic properties \Dnu and \numax from Table~\ref{astero_table}. Theoretical predictions of \Dnu and \numax were computed using the asteroseismic scaling relation for any point along an evolutionary track or isochrone. For the solar values, we adopted $\nu_{\text{max, }\odot}=3090$~$\mu$Hz, $\Delta\nu_{\odot}=135.1$~$\mu$Hz \citep{huber2011}, and $T_{\text{eff, }\odot}=5777$~K.
-\newpage
 
 The accuracy of the asteroseismic scaling relations across different metallicities, effective temperatures, and evolutionary status is currently under discussion \citep[see][]{white2011,belkacem2011,sharma2016,viani2017}.
 We applied the correction by \cite{Serenelli:2017cn} to the large frequency separation relation in Equation~\ref{Dnuscaling} as it has been shown to reproduce the results of a number of classical age determination for the open clusters M67 \citep{stello2016} and NGC~6819 \citep{casagrande2016}.
@@ -301,7 +343,7 @@ To gauge the level of improvement in our understanding of these stars, in Figure
 
 \begin{figure}
 % \noindent\includegraphics[width=17cm,keepaspectratio]{different_constraints_fullsample_ove02.pdf}
-\noindent\includegraphics[width=8.5cm,keepaspectratio]{different_constraints_ben.pdf}
+\plotone{different_constraints_ben.pdf}
 
 \caption{\label{masses}
 Using asteroseismic constraints only (red) and asteroseismic and spectroscopic constraints jointly (blue) we infer the masses of each star in the asteroseismic sample of giants.}
@@ -310,7 +352,7 @@ Using asteroseismic constraints only (red) and asteroseismic and spectroscopic c
 
 
 \begin{figure}
-\noindent\includegraphics[width=8.5cm,keepaspectratio]{combined_radii.eps}
+\plotone{combined_radii.eps}
 
 \caption{\label{gaia_comparison}
 A comparison of the stellar radii determined here from asteroseismology and spectroscopy to those from the \gaia~DR2 catalogue and from our own calculations based on \gaia parallaxes and TRES spectroscopy. There is overall good agreement except for very large radii, and except for BD+39~3577 (marked), which we do not understand.}
@@ -321,7 +363,7 @@ A comparison of the stellar radii determined here from asteroseismology and spec
 The chemical composition for each star was measured in the $\alpha$ (Mg, Ti, Si, Ca), odd-Z (Al, V) and Fe-peak (Fe, Ni) elemental families in a differential way with respect to Arcturus. The chemical composition for the neutron-capture elements are shown in Fig.~\ref{fig:ncap}, and were derived in absolute terms rather than differentially with respect to Arcturus. The elemental abundance ratios were measured in order to determine the Galactic populations to which these stars belong. The metallicities, which are tabulated in Table~\ref{stellar_props}, are too high (with $-0.51<$~[M/H]~$<$ +0.14~dex) to belong to the Galactic halo, whose peak metallicity is around $\sim -1.50$ \cite[e.g.][]{Chiba2000}. Furthermore, the distance distribution (Table~\ref{all_stars}) indicates that all stars are located within a few~kpc of the Sun and are not part of the Galactic bulge. Thus, these stars are drawn from only the Galactic thick and thin disks. We provide a detailed chemical abundance analysis below to support this claim.\\
 
 \begin{figure*}
-\noindent\includegraphics[width=0.7\textwidth,keepaspectratio]{Pope_alpha_oddZ.pdf}
+\plotone{Pope_alpha_oddZ.pdf}
 
 \caption{\label{alphael}
 The [Mg/Fe], [Si/Fe], [Ti/Fe], [V/Fe] (left panel) and [Al/Fe], [Ca/Fe], [Ni/Fe], [Cr/Fe] (right panel) abundance ratios as a function of iron for our stars (black circles). We also show a representative sample of Galactic disk stars from \citet[open red squares]{Bensby2014}, \citet[open orange squares]{Adibekyan2012}, and \citet[light green circles]{Battistini2015}. These elemental ratios show that the chemical composition of our sample is consistent with the Galactic disk population. } %Mg was chosen as an illustrative $\alpha$-element. } 
@@ -336,7 +378,7 @@ For most of the stars in our sample, the [Mg/Fe] abundance ratios are enhanced. 
 
 In addition, to the $\alpha$ and odd-Z elements we also derived the chemical abundance for several neutron capture elements including Sr, Zr, La, Eu (left panel of Fig~\ref{fig:ncap}) as well as Y, Ba, and Nd (right panel of Fig.~\ref{fig:ncap}).  It is clear from Fig.~\ref{fig:ncap}  that the chemical abundance ratio of each neutron capture element is consistent with the Galactic disk population. The Ba of our sample is slightly enhanced, however, while the Y of our sample is slightly reduced relative to the general disk population of \cite{Bensby2014}. Nevertheless, we conclude all elemental abundance ratios studied our sample most closely resemble the Galactic disk. 
 \begin{figure*}
-\noindent\includegraphics[width=0.7\textwidth,keepaspectratio]{Pope_ncap.pdf}
+\plotone{Pope_ncap.pdf}
 
 \caption{\label{fig:ncap}
 The [Mg/Fe], [Si/Fe], [Ti/Fe], [V/Fe] (left panel) and [Al/Fe], [Ca/Fe], [Ni/Fe], [Cr/Fe] (right panel) abundance ratios as a function of iron for our stars (black circles). We also show a representative sample of Galactic disk stars from \citet[open red square,][]{Bensby2014}, \citet[green circles][]{Battistini2016}. These elemental ratios give a representive example of the chemical composition of our sample and show they are consistent with the Galactic disk population. } %Mg was chosen as an illustrative $\alpha$-element. } 
@@ -354,7 +396,7 @@ The term `red clump' arises from the fact that such stars can have a very narrow
 From inspection of the power spectra, HD~181069, HD~183124, HD~182354, HD~182692, and HD~180658 are seen to be red clump stars. A power spectrum of the best example of these, HD~183124, together with a period \'{e}chelle diagram used to estimate its \textit{g}-mode period spacing, are shown in Figure~\ref{HD_183124}. While precise characterization of these stars is beyond the scope of this paper, they are ideal candidates for anchoring models of the mass and metallicity dependence of red clump properties for calibrating \gaia and other distance measures. 
 
 \begin{figure*}
-\noindent\includegraphics[width=19cm,keepaspectratio]{HD_183124.png}
+\plotone{HD_183124.png}
 
 \caption{\label{HD_183124}
 Power spectrum (left) and period \'{e}chelle diagram (right) of the solar-like oscillations of the red clump star HD~183124. The modes in the power spectrum used for the period \'{e}chelle diagram are highlighted with blue dots. In the period \'{e}chelle diagram we see the characteristic pattern of `bumped' modes from avoided crossings between the comb of \textit{p}-modes and \textit{g}-mode oscillations with a period spacing of $\Delta \Pi = 300.1~\text{s}$.}
@@ -373,7 +415,7 @@ The sample includes 5 $\delta$\,Sct stars, which show p-mode pulsation. These os
 In four of the five targets we found evidence for binarity, while in the fifth (HD\,185397) there was some time-delay variation but there was no agreement between different modes so it is not of binary origin. Of the others, HD\,175841 and HD\,177781 are probably very long-period binaries, with periods far exceeding the Kepler datasets of $\sim$1470\,d. HD\,181521 appears to be an eccentric binary with a period of at least 1000\,d, but there is only 1 maximum and 1 minimum in the time-delay curve \citep[cf.][]{murphy&shibahashi2015}, so a unique orbital solution was unobtainable. Finally, HD\,186255 is probably a binary with a period of $\sim$415\,d (Figure~\ref{pm}), but there is a slight aperiodicity in the time delays, likely caused by beating between pulsation modes that are not well-separated in the frequency. That, coupled with the fact that this star falls on the failed Module 3 and is therefore missing data every 4th quarter (i.e. $\sim$93 of every 372.5\,d), makes the binary classification uncertain. If this is indeed a 415-d binary, the time delays are consistent with a companion of minimum mass $\sim$0.45\,M$_{\odot}$ in an orbit of moderate eccentricity ($\sim$0.15).
 
 \begin{figure*}
-\noindent\includegraphics[width=19cm,keepaspectratio]{HD186255_time-delay_plot.png}
+\plotone{HD186255_time-delay_plot.png}
 
 \caption{\label{pm}
 Time delay as a function of time for the $\delta$\,Sct star HD~186255, calculated for three of its oscillation modes ($f_2$, $f_5$, and $f_8$) and their average. These vary in unison, but with a small amplitude, and are possibly indicative of a low-mass or highly inclined companion.}
@@ -440,7 +482,6 @@ This research made use of NASA's Astrophysics Data System; the SIMBAD database, 
 
 % The best way to enter references is to use BibTeX:
 
-\bibliographystyle{mnras}
 \bibliography{ms} % if your bibtex file is called example.bib
 
 
@@ -456,8 +497,6 @@ This research made use of NASA's Astrophysics Data System; the SIMBAD database, 
 
 
 % Don't change these lines
-\bsp	% typesetting comment
-\label{lastpage}
 \end{document}
 
 % End of mnras_template.tex

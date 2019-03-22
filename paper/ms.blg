@@ -1,51 +1,50 @@
 This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ms.aux
-The style file: mnras.bst
+The style file: aasjournal.bst
 Database file #1: ms.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in aertsbook
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 You've used 147 entries,
-            2881 wiz_defined-function locations,
-            1899 strings with 72453 characters,
-and the built_in function-call counts, 67102 in all, are:
-= -- 5515
-> -- 4712
-< -- 248
-+ -- 2153
-- -- 621
-* -- 8850
-:= -- 10267
-add.period$ -- 0
+            3166 wiz_defined-function locations,
+            1690 strings with 64146 characters,
+and the built_in function-call counts, 84060 in all, are:
+= -- 5645
+> -- 8911
+< -- 40
++ -- 2960
+- -- 3171
+* -- 8728
+:= -- 16284
+add.period$ -- 156
 call.type$ -- 147
-change.case$ -- 294
+change.case$ -- 813
 chr.to.int$ -- 143
 cite$ -- 148
-duplicate$ -- 3334
-empty$ -- 3400
-format.name$ -- 1119
-if$ -- 11475
+duplicate$ -- 2535
+empty$ -- 4006
+format.name$ -- 3326
+if$ -- 16138
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 144
-newline$ -- 455
-num.names$ -- 903
-pop$ -- 783
+missing$ -- 136
+newline$ -- 458
+num.names$ -- 591
+pop$ -- 913
 preamble$ -- 1
-purify$ -- 588
+purify$ -- 813
 quote$ -- 0
-skip$ -- 1901
+skip$ -- 2051
 stack$ -- 0
-substring$ -- 3804
-swap$ -- 1650
-text.length$ -- 601
+substring$ -- 2416
+swap$ -- 74
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1320
 warning$ -- 1
-while$ -- 1023
+while$ -- 514
 width$ -- 0
-write$ -- 1497
+write$ -- 1609
 (There was 1 warning)
