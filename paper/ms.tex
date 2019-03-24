@@ -39,7 +39,14 @@
 \usepackage{ae,aecompl}
 \usepackage{longtable}
 \usepackage{ulem}
+\usepackage{newunicodechar,graphicx}
 
+\DeclareRobustCommand{\okina}{%
+  \raisebox{\dimexpr\fontcharht\font`A-\height}{%
+    \scalebox{0.8}{`}%
+  }%
+}
+\newunicodechar{ʻ}{\okina}
 
 %%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
 
@@ -142,13 +149,13 @@
 \affiliation{Instituut voor Sterrenkunde, KU Leuven, Celestijnenlaan 200D, B-3001 Leuven, Belgium}
 
 \author[0000-0003-1125-2564	]{Ashley Chontos}
-\affiliation{Institute for Astronomy, University of Hawai'i, 2680 Woodlawn Drive, Honolulu, HI 96822, USA}
+\affiliation{Institute for Astronomy, University of Hawai\okina i, 2680 Woodlawn Drive, Honolulu, HI 96822, USA}
 
 \author[0000-0002-9789-5474]{Gilbert A. Esquerdo}
 \affiliation{Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA}
 
 \author[0000-0001-8832-4488 ]{Daniel Huber}
-\affiliation{Institute for Astronomy, University of Hawai'i, 2680 Woodlawn Drive, Honolulu, HI 96822, USA}
+\affiliation{Institute for Astronomy, University of Hawai\okina i, 2680 Woodlawn Drive, Honolulu, HI 96822, USA}
 \affiliation{SETI Institute, 189 Bernardo Avenue, Mountain View, CA 94043, USA}
 \affiliation{Stellar Astrophysics Centre, Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark}
 
@@ -175,7 +182,7 @@
 
 % Abstract of the paper
 \begin{abstract}
-We present the first data release of the \kepler Smear Campaign, using collateral `smear' data obtained in the \kepler four-year mission to reconstruct light curves of 102~stars too bright to have been otherwise targeted. We describe the pipeline developed to extract and calibrate these light curves, and show that we attain photometric precision comparable to stars analyzed by the standard pipeline in the nominal \kepler mission. In this paper, aside from publishing the light curves of these stars, we focus on 66~red giants for which we detect solar-like oscillations, characterizing 33 of these in detail with spectroscopic chemical abundances and asteroseismic masses as benchmark stars. We also classify the whole sample, finding nearly all to be variable, with classical pulsations and binary effects. All source code, light curves, TRES spectra, and asteroseismic and stellar parameters are publicly available as a \kepler legacy sample. \href{https://github.com/benjaminpope/smearcampaign}{\color{linkcolor}\faGithub}
+We present the first data release of the \kepler Smear Campaign, using collateral `smear' data obtained in the \kepler four-year mission to reconstruct light curves of 102~stars too bright to have been otherwise targeted. We describe the pipeline developed to extract and calibrate these light curves, and show that we attain photometric precision comparable to stars analyzed by the standard pipeline in the nominal \kepler mission. In this paper, aside from publishing the light curves of these stars, we focus on 66~red giants for which we detect solar-like oscillations, characterizing 33 of these in detail with spectroscopic chemical abundances and asteroseismic masses as benchmark stars. We also classify the whole sample, finding nearly all to be variable, with classical pulsations and binary effects. All source code, light curves, TRES spectra, and asteroseismic and stellar parameters are publicly available as a \kepler legacy sample. \href{https://github.com/benjaminpope/smearcampaign}{\faGithub}
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -262,7 +269,7 @@ In the case of HD~181878, a red giant on Module~13, there is clear and significa
 \begin{figure}
 \plotone{contam_HD_181778.pdf}
 \caption{\label{contamination}
-Power spectra of odd and even quarters of HD~181778. It is clear from inspection that while odd quarters have the power spectrum expected of a giant star, even quarters have very high amplitude coherent oscillations.}
+Power spectra of odd and even quarters of HD~181778. Even quarters have very high amplitude coherent oscillations that are absent in odd quarters.}
 \end{figure}
 
 
@@ -332,7 +339,8 @@ To achieve the most precise abundances we have derived them both with and withou
 
 We determined the mass, radius, and age for the 33 red giants from their atmospheric and asteroseismic observables (see Table~\ref{astero_table}) using the BAyesian STellar Algorithm \citep[\textsc{basta}][]{silvaaguirre2015,silvaaguirre2017}. \textsc{basta} compares the observed properties with predictions from theoretical models of stellar evolution, in this case the recently updated BaSTI (a Bag of Stellar Tracks and Isochrones) stellar models and isochrones library \citep{Hidalgo:2018dy}. The isochrones include core overshooting with an efficiency of 0.20 times the pressure scale height as described in \citet{Hidalgo:2018dy}, but do not include diffusion or rotational mixing.
 
-The spectroscopic properties are the effective temperature \teff, the metallicity \feh, and the surface gravities \logg from Table~\ref{stellar_props}. These are accompanied by the global asteroseismic properties \Dnu and \numax from Table~\ref{astero_table}. Theoretical predictions of \Dnu and \numax were computed using the asteroseismic scaling relation for any point along an evolutionary track or isochrone. For the solar values, we adopted $\nu_{\text{max, }\odot}=3090$~$\mu$Hz, $\Delta\nu_{\odot}=135.1$~$\mu$Hz \citep{huber2011}, and $T_{\text{eff, }\odot}=5777$~K.
+The spectroscopic properties are the effective temperature \teff, the metallicity \feh, and the surface gravities \logg from Table~\ref{stellar_props}. These are accompanied by the global asteroseismic properties \Dnu and \numax from Table~\ref{astero_table}. Theoretical predictions of \Dnu and \numax were computed using the asteroseismic scaling relation for any point along an evolutionary track or isochrone. For the solar values, we adopted $\nu_{\text{max, }\odot}=3090$~$\mu$Hz, $\Delta\nu_{\odot}=135.1$~$\mu$Hz \citep{huber2011}, and $T_{\text{eff, }\odot}=5777$~K. We emphasize that all quoted error bars in Tables~\ref{stellar_props} and~\ref{astero_table} are formal uncertainties, and do not take into account systematic differences in asteroseismic measurement methods, effective temperature scales, or stellar model physics. For example, recent tests of red giant models imply that systematic age errors can be expected to be significantly larger than the formal age uncertainties in Table~\ref{stellar_props} \citep{Tayar2017}.
+
 
 The accuracy of the asteroseismic scaling relations across different metallicities, effective temperatures, and evolutionary status is currently under discussion \citep[see][]{white2011,belkacem2011,sharma2016,viani2017}.
 We applied the correction by \cite{Serenelli:2017cn} to the large frequency separation relation in Equation~\ref{Dnuscaling} as it has been shown to reproduce the results of a number of classical age determination for the open clusters M67 \citep{stello2016} and NGC~6819 \citep{casagrande2016}.
@@ -355,7 +363,7 @@ Using asteroseismic constraints only (red) and asteroseismic and spectroscopic c
 \plotone{combined_radii.eps}
 
 \caption{\label{gaia_comparison}
-A comparison of the stellar radii determined here from asteroseismology and spectroscopy to those from the \gaia~DR2 catalogue and from our own calculations based on \gaia parallaxes and TRES spectroscopy. There is overall good agreement except for very large radii, and except for BD+39~3577 (marked), which we do not understand.}
+A comparison of the stellar radii determined here from asteroseismology and spectroscopy to those from the \gaia~DR2 catalogue and from our own calculations based on \gaia parallaxes and TRES spectroscopy. There is overall good agreement except for very large radii, and except for BD+39~3577 (marked).}
 \end{figure}
 
 \subsubsection{Chemical Compositions}
@@ -460,10 +468,10 @@ The \kepler Smear Campaign has another natural extension: while many saturated s
 
 \section*{Acknowledgements} % add your acknowledgements text here!
 
-This work was performed in part under contract with the Jet Propulsion Laboratory (JPL) funded by NASA through the Sagan Fellowship Program executed by the NASA Exoplanet Science Institute. BJSP also acknowledges support from Balliol College and the Clarendon Fund. DH acknowledges support by the National Aeronautics and Space Administration through the K2 Guest Observer Program (NNX17AF76G, 80NSSC18K0362) and the National Science Foundation (AST-1717000). TRW acknowledges the support of the Australian Research Council (grant DP150100250). TRW and VSA acknowledge
+This work was performed in part under contract with the Jet Propulsion Laboratory (JPL) funded by NASA through the Sagan Fellowship Program executed by the NASA Exoplanet Science Institute. BJSP also acknowledges support from Balliol College and the Clarendon Fund. DH acknowledges support by the National Aeronautics and Space Administration through the K2 Guest Observer Program (NNX17AF76G, 80NSSC19K0108, 80NSSC18K0362) and the National Science Foundation (AST-1717000). TRW acknowledges the support of the Australian Research Council (grant DP150100250). TRW and VSA acknowledge
 the support of the Villum Foundation (research grant 10118). DWL acknowledges partial support from the Kepler Extended Mission under NASA Cooperative Agreement NNX13AB58A with the Smithsonian Astrophysical Observatory. The research leading to these results has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No670519: MAMSIE). VSA acknowledges support the Independent Research Fund Denmark (Research grant 7027-00096B). Funding for the Stellar Astrophysics Centre is provided by The Danish National Research Foundation (Grant agreement No.~DNRF106). PJ acknowledges FONDECYT Iniciaci\'on grant 11170174. 
 
-% BJSP acknowledges being on the traditional territory of the Lenape Nations and recognizes that Manhattan continues to be the home to many Algonkian peoples. We give blessings and thanks to the Lenape people and Lenape Nations in recognition that we are carrying out this work on their indigenous homelands. We would like to acknowledge the Gadigal Clan of the Eora Nation as the traditional owners of the land on which the University of Sydney is built and on which some of this work was carried out, and pay their respects to their knowledge, and their elders past, present and future. %% Take this out for MNRAS
+BJSP acknowledges being on the traditional territory of the Lenape Nations and recognizes that Manhattan continues to be the home to many Algonkian peoples. We give blessings and thanks to the Lenape people and Lenape Nations in recognition that we are carrying out this work on their indigenous homelands. We would like to acknowledge the Gadigal Clan of the Eora Nation as the traditional owners of the land on which the University of Sydney is built and on which some of this work was carried out, and pay their respects to their knowledge, and their elders past, present and future. %% Take this out for MNRAS
 
 This work has made use of data from the European Space Agency (ESA) mission
 {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia}
