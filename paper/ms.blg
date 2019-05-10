@@ -3,48 +3,48 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ms.aux
 The style file: aasjournal.bst
 Database file #1: ms.bib
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in aertsbook
-You've used 148 entries,
+You've used 150 entries,
             3166 wiz_defined-function locations,
-            1697 strings with 64939 characters,
-and the built_in function-call counts, 84825 in all, are:
-= -- 5680
-> -- 9021
+            1713 strings with 65834 characters,
+and the built_in function-call counts, 86115 in all, are:
+= -- 5777
+> -- 9135
 < -- 40
-+ -- 2996
-- -- 3209
-* -- 8821
-:= -- 16443
-add.period$ -- 157
-call.type$ -- 148
-change.case$ -- 817
-chr.to.int$ -- 144
-cite$ -- 149
-duplicate$ -- 2552
-empty$ -- 4032
-format.name$ -- 3365
-if$ -- 16276
++ -- 3034
+- -- 3252
+* -- 8950
+:= -- 16673
+add.period$ -- 160
+call.type$ -- 150
+change.case$ -- 829
+chr.to.int$ -- 146
+cite$ -- 151
+duplicate$ -- 2586
+empty$ -- 4102
+format.name$ -- 3408
+if$ -- 16540
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 137
-newline$ -- 461
-num.names$ -- 595
-pop$ -- 917
+missing$ -- 139
+newline$ -- 468
+num.names$ -- 603
+pop$ -- 932
 preamble$ -- 1
-purify$ -- 817
+purify$ -- 829
 quote$ -- 0
-skip$ -- 2064
+skip$ -- 2104
 stack$ -- 0
-substring$ -- 2430
+substring$ -- 2506
 swap$ -- 74
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1329
+type$ -- 1347
 warning$ -- 1
-while$ -- 517
+while$ -- 524
 width$ -- 0
-write$ -- 1620
+write$ -- 1642
 (There was 1 warning)
