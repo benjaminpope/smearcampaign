@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 #import pandas as pd
 import matplotlib as mpl 
-mpl.rcParams['font.size']=22               #10 
+mpl.rcParams['font.size']=24               #10 
 mpl.rcParams["font.family"] = "Times New Roman"
 
 file = "HD_183124_smear_combined.clip.ts.fft"  # best one
