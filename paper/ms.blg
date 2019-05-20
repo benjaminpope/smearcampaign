@@ -6,45 +6,45 @@ Database file #1: ms.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in aertsbook
-You've used 151 entries,
+You've used 152 entries,
             3166 wiz_defined-function locations,
-            1718 strings with 65973 characters,
-and the built_in function-call counts, 86404 in all, are:
-= -- 5804
-> -- 9147
-< -- 41
-+ -- 3038
-- -- 3255
-* -- 8969
-:= -- 16730
-add.period$ -- 162
-call.type$ -- 151
-change.case$ -- 833
-chr.to.int$ -- 147
-cite$ -- 152
-duplicate$ -- 2600
-empty$ -- 4126
-format.name$ -- 3412
-if$ -- 16598
+            1723 strings with 66133 characters,
+and the built_in function-call counts, 86765 in all, are:
+= -- 5839
+> -- 9169
+< -- 42
++ -- 3045
+- -- 3262
+* -- 8997
+:= -- 16796
+add.period$ -- 164
+call.type$ -- 152
+change.case$ -- 838
+chr.to.int$ -- 148
+cite$ -- 153
+duplicate$ -- 2616
+empty$ -- 4150
+format.name$ -- 3423
+if$ -- 16671
 int.to.chr$ -- 5
 int.to.str$ -- 0
 missing$ -- 139
-newline$ -- 472
-num.names$ -- 607
-pop$ -- 935
+newline$ -- 476
+num.names$ -- 611
+pop$ -- 941
 preamble$ -- 1
-purify$ -- 833
+purify$ -- 838
 quote$ -- 0
-skip$ -- 2115
+skip$ -- 2126
 stack$ -- 0
-substring$ -- 2513
+substring$ -- 2520
 swap$ -- 74
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1356
+type$ -- 1365
 warning$ -- 1
-while$ -- 527
+while$ -- 530
 width$ -- 0
-write$ -- 1654
+write$ -- 1666
 (There was 1 warning)
