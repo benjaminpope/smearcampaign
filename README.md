@@ -2,7 +2,7 @@
 [![arXiv](http://img.shields.io/badge/arXiv-1510.00008-blue.svg?style=flat)](http://arxiv.org/abs/1510.00008)
 [![DOI](https://zenodo.org/badge/142075113.svg)](https://zenodo.org/badge/latestdoi/142075113)
 
-A repository containing the paper, data and notebooks for the __Kepler Smear Campaign__, a study of the brightest stars in the _Kepler_ field not observed conventionally by _Kepler_, but which we have retrieved with smear photometry (https://arxiv.org/abs/1510.00008). 
+A repository containing the paper, data and notebooks for the __Kepler Smear Campaign__, a study of the brightest stars in the _Kepler_ field not observed conventionally by _Kepler_, but which we have retrieved with [smear photometry](https://arxiv.org/abs/1510.00008). 
 
 The core science of this first paper is a study of the brightest red giants in the _Kepler_ field, using asteroseismology jointly with spectroscopy from the Tillinghast Reflector Échelle Spectrograph (TRES) to obtain chemical abundances. These stars will be important as benchmarks for surveys such as APOGEE. We present these together with a catalogue of the other bright stars in the _Kepler_ field and a determination of the variability class of each. 
 
