@@ -6,13 +6,34 @@ A repository containing the paper, data and notebooks for the __Kepler Smear Cam
 
 The core science of this first paper is a study of the brightest red giants in the _Kepler_ field, using asteroseismology jointly with spectroscopy from the Tillinghast Reflector Échelle Spectrograph (TRES) to obtain chemical abundances. These stars will be important as benchmarks for surveys such as APOGEE. We present these together with a catalogue of the other bright stars in the _Kepler_ field and a determination of the variability class of each. 
 
-All lightcurves will be made available as High-Level Science Products (HLSPs) on the Mikulski Archive for Space Telescopes (MAST) upon publication.
+All lightcurves are being ingested as High-Level Science Products (HLSPs) on the Mikulski Archive for Space Telescopes (MAST), and will be available [here](http://archive.stsci.edu/doi/resolve/resolve.html?doi=10.17909/t9-4sgf-9c19) and in this repository under data/release.
 
 ## Citation
 
 If you wish to use light curves not available through MAST please offer coauthorship to members of the __Kepler Smear Campaign__. 
 
-Please cite our forthcoming paper as Pope et al. (in prep), together with the original smear paper, using the following BibTeX:
+Please cite our paper using the following BibTeX:
+
+	@ARTICLE{2019arXiv190509831P,
+	   author = {{Pope}, B.~J.~S. and {Davies}, G.~R. and {Hawkins}, K. and {White}, T.~R. and 
+		{Stokholm}, A. and {Bieryla}, A. and {Latham}, D.~W. and {Lucey}, M. and 
+		{Aerts}, C. and {Aigrain}, S. and {Antoci}, V. and {Bedding}, T.~R. and 
+		{Bowman}, D.~M. and {Caldwell}, D.~A. and {Chontos}, A. and 
+		{Esquerdo}, G.~A. and {Huber}, D. and {Jofre}, P. and {Murphy}, S.~J. and 
+		{van Reeth}, T. and {Silva Aguirre}, V. and {Yu}, J.},
+	    title = "{The Kepler Smear Campaign: Light curves for 102 Very Bright Stars}",
+	  journal = {arXiv e-prints},
+	archivePrefix = "arXiv",
+	   eprint = {1905.09831},
+	 primaryClass = "astro-ph.SR",
+	 keywords = {Astrophysics - Solar and Stellar Astrophysics, Astrophysics - Earth and Planetary Astrophysics, Astrophysics - Instrumentation and Methods for Astrophysics},
+	     year = 2019,
+	    month = may,
+	   adsurl = {https://ui.adsabs.harvard.edu/abs/2019arXiv190509831P},
+	  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	}
+
+Could you please also cite it together with the original smear paper:
 
 	@ARTICLE{2016MNRAS.455L..36P,
 	   author = {{Pope}, B.~J.~S. and {White}, T.~R. and {Huber}, D. and {Murphy}, S.~J. and 
